@@ -245,7 +245,7 @@ $(document).ready(function () {
 
         }
     });
-    var backgroundUrl="https://api.open5e.com/backgrounds/";
+    /* var backgroundUrl="https://api.open5e.com/backgrounds/";
     $.ajax({
 
         url: backgroundUrl,
@@ -264,5 +264,5 @@ $(document).ready(function () {
         error: function (result) {
 
         }
-    });
+    }); */
 });
