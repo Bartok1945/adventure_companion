@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--head of the html pag-->
+
+<head>
+    <!--meta information-->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+    @media only screen and (min-width: 993px)
+    {
+.container {
+    width: 100%;
+}
+    }
+</style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <h2 class="center-align">Adventure Companion</h2>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s6">
+                <h4 class="left-align" style="text-align: end;margin:0">Enter the character</h4>
+
+
+            </div>
+            <div class="col s6">
+                <input type="text" style="width: 70%;" placeholder="Character" />
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s3">
+                <a class='dropdown-button btn dropdownBtn classbtn' href='#' data-activates='classDrop'>Class<i
+                        class="material-icons right">arrow_drop_down</i></a>
+
+                <!-- Dropdown Structure -->
+                <ul id='classDrop' class='dropdown-content'>
+
+                </ul>
+
+            </div>
+            <div class="col s3">
+                <a class='dropdown-button btn dropdownBtn levelbtn' href='#' data-activates='levelDrop'>Level<i
+                        class="material-icons right">arrow_drop_down</i></a>
+
+                <!-- Dropdown Structure -->
+                <ul id='levelDrop' class='dropdown-content'>
+                    <li>Level 1</li>
+                    <li>Level 2</li>
+                    <li>Level 3</li>
+                    <li>Level 4</li>
+                    <li>Level 5</li>
+                    <li>Level 6</li>
+                    <li>Level 7</li>
+                    <li>Level 8</li>
+                    <li>Level 9</li>
+                    <li>Level 10</li>
+                    <li>Level 11/li>
+                    <li>Level 12</li>
+                    <li>Level 13</li>
+                    <li>Level 14</li>
+                    <li>Level 15</li>
+                    <li>Level 16</li>
+                    <li>Level 17</li>
+                    <li>Level 18</li>
+                    <li>Level 19</li>
+                    <li>Level 20</li>
+
+                </ul>
+
+            </div>
+            <div class="col s3">
+                <a class='dropdown-button btn dropdownBtn racebtn' href='#' data-activates='raceDrop'>Race<i
+                    class="material-icons right">arrow_drop_down</i></a>
+
+            <!-- Dropdown Structure -->
+            <ul id='raceDrop' class='dropdown-content'>
+
+            </ul>
+
+            </div>
+            <div class="col s3">
+                <a class='dropdown-button btn dropdownBtn backbtn' href='#' data-activates='backDrop'>Background<i
+                    class="material-icons right">arrow_drop_down</i></a>
+
+            <!-- Dropdown Structure -->
+            <ul id='backDrop' class='dropdown-content'>
+
+            </ul>
+
+            </div>
+        </div>
+            <div class="row">
+                <div class="col s12">
+                  <div class="card blue-grey darken-1" style="width: 100%;">
+                    <div class="card-content white-text">
+                      <span class="card-title center-align">Ability Score</span>
+                      <hr>
+                      <div class="row">
+                          <div class="col s2"> <p>STRENGTH</p>
+        <a class='dropdown-button btn dropdownBtn strengthbtn' id='strengthDrop' href='#' data-activates='strengthDropList'>Score<i
+                            class="material-icons right">arrow_drop_down</i></a>
+    
+                    <!-- Dropdown Structure -->
+                    <ul  id='strengthDropList' class='dropdown-content'>
+                        
+                    </ul>
+                </div>
+                          <div class="col s2"> <p>DEXTERITY</p>
+                           <a class='dropdown-button btn dropdownBtn DEXTERITYbtn' id='DEXTERNITYDrop' href='#' data-activates='DEXTERITYDropList'>Score<i
+                            class="material-icons right">arrow_drop_down</i></a>
+    
+                    <!-- Dropdown Structure -->
+                    <ul  id='DEXTERITYDropList' class='dropdown-content'>
+                        
+                    </ul>
+                </div>
+                          <div class="col s2"> <p>CONSTITUTION</p>
+                            <a class='dropdown-button btn dropdownBtn CONSTITUTIONbtn' id='CONSTITUTIONDrop' href='#' data-activates='CONSTITUTIONDropList'>Score<i
+                                class="material-icons right">arrow_drop_down</i></a>
+        
+                        <!-- Dropdown Structure -->
+                        <ul  id='CONSTITUTIONDropList' class='dropdown-content'>
+                        </div>
+                          <div class="col s2"> <p>INTELLIGENCE</p>
+                            <a class='dropdown-button btn dropdownBtn INTELLIGENCEbtn' id='INTELLIGENCEDrop' href='#' data-activates='INTELLIGENCEDropList'>Score<i
+                                class="material-icons right">arrow_drop_down</i></a>
+        
+                        <!-- Dropdown Structure -->
+                        <ul  id='INTELLIGENCEDropList' class='dropdown-content'>
+
+                        </div>
+                          <div class="col s2"> <p>WISDOM</p>
+                            <a class='dropdown-button btn dropdownBtn WISDOMbtn' id='WISDOMDrop' href='#' data-activates='WISDOMDropList'>Score<i
+                                class="material-icons right">arrow_drop_down</i></a>
+        
+                        <!-- Dropdown Structure -->
+                        <ul  id='WISDOMDropList' class='dropdown-content'></div>
+                          <div class="col s2"> <p>CHARISMA</p>
+                            <a class='dropdown-button btn dropdownBtn CHARISMAbtn' id='CHARISMADrop' href='#' data-activates='CHARISMADropList'>Score<i
+                                class="material-icons right">arrow_drop_down</i></a>
+        
+                        <!-- Dropdown Structure -->
+                        <ul  id='CHARISMADropList' class='dropdown-content'></div>
+                    </div>
+                </div>
+                    <div class="card-action">
+                      <a href="#">This is a link</a>
+                      <a href="#">This is a link</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col s12">
+                  <div class="card blue-grey darken-1" style="width: 100%;">
+                    <div class="card-content white-text">
+                      <span class="card-title center-align">Armor Class</span>
+                      <hr>
+                      <div class="row" id="armor">
+                        
+                    </div>
+                    </div>
+                </div>
+                    
+                  </div>
+                </div>
+              
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            //  $('.dropdown-button').dropdown('open');
+            var standardArray=[15,14,13,12,10,8];
+            var armorClass=[];
+            fillClass();
+            $('#strengthDrop').on("click", function () {
+                // alert("hello");
+                 $("#strengthDropList").empty();
+                for(var i=0;i<standardArray.length;i++)
+                {
+                var li="<li>"+standardArray[i]+"</li>";
+                $("#strengthDropList").append(li);
+                }
+              //  $('.strengthbtn').text(a)
+            });
+            $('#strengthDropList').on("click", function (event) {
+                 alert("hello");
+                console.log(event);
+                a = event.target.innerText;
+                console.log(a);
+                $('.strengthbtn').text(a);
+               deleteElementFromArray(a);
+                console.log(standardArray);
+            });
+            $('#DEXTERNITYDrop').on("click", function () {
+               //  alert("hello");
+                 $("#DEXTERITYDropList").empty();
+                for(var i=0;i<standardArray.length;i++)
+                {
+                var li="<li>"+standardArray[i]+"</li>";
+                $("#DEXTERITYDropList").append(li);
+                }
+              //  $('.strengthbtn').text(a)
+            });
+            $('#DEXTERITYDropList').on("click", function (event) {
+                 alert("hello");
+                console.log(event);
+                a = event.target.innerText;
+                console.log(a);
+                $('.DEXTERITYbtn').text(a);
+               deleteElementFromArray(a);
+                console.log(standardArray);
+            });
+            $('#CONSTITUTIONDrop').on("click", function () {
+                // alert("hello");
+                 $("#CONSTITUTIONDropList").empty();
+                for(var i=0;i<standardArray.length;i++)
+                {
+                var li="<li>"+standardArray[i]+"</li>";
+                $("#CONSTITUTIONDropList").append(li);
+                }
+              //  $('.strengthbtn').text(a)
+            });
+            $('#CONSTITUTIONDropList').on("click", function (event) {
+               //  alert("hello");
+                console.log(event);
+                a = event.target.innerText;
+                console.log(a);
+                $('.CONSTITUTIONbtn').text(a);
+               deleteElementFromArray(a);
+                console.log(standardArray);
+            });
+            $('#INTELLIGENCEDrop').on("click", function () {
+                // alert("hello");
+                 $("#INTELLIGENCEDropList").empty();
+                for(var i=0;i<standardArray.length;i++)
+                {
+                var li="<li>"+standardArray[i]+"</li>";
+                $("#INTELLIGENCEDropList").append(li);
+                }
+              //  $('.strengthbtn').text(a)
+            });
+            $('#INTELLIGENCEDropList').on("click", function (event) {
+                 alert("hello");
+                console.log(event);
+                a = event.target.innerText;
+                console.log(a);
+                $('.INTELLIGENCEbtn').text(a);
+               deleteElementFromArray(a);
+                console.log(standardArray);
+            });
+            $('#WISDOMDrop').on("click", function () {
+                // alert("hello");
+                 $("#WISDOMDropList").empty();
+                for(var i=0;i<standardArray.length;i++)
+                {
+                var li="<li>"+standardArray[i]+"</li>";
+                $("#WISDOMDropList").append(li);
+                }
+              //  $('.strengthbtn').text(a)
+            });
+            $('#WISDOMDropList').on("click", function (event) {
+                 alert("hello");
+                console.log(event);
+                a = event.target.innerText;
+                console.log(a);
+                $('.WISDOMbtn').text(a);
+               deleteElementFromArray(a);
+                console.log(standardArray);
+            });
+            $('#CHARISMADrop').on("click", function () {
+                // alert("hello");
+                 $("#CHARISMADropList").empty();
+                for(var i=0;i<standardArray.length;i++)
+                {
+                var li="<li>"+standardArray[i]+"</li>";
+                $("#CHARISMADropList").append(li);
+                }
+              //  $('.strengthbtn').text(a)
+            });
+            $('#CHARISMADropList').on("click", function (event) {
+                 alert("hello");
+                console.log(event);
+                a = event.target.innerText;
+                console.log(a);
+                $('.CHARISMAbtn').text(a);
+               deleteElementFromArray(a);
+                console.log(standardArray);
+            });
+            function deleteElementFromArray(a)
+            {
+                for(var i=0;i<standardArray.length;i++)
+                {
+                    if(standardArray[i]==a)
+                    {
+                        standardArray.splice($.inArray(standardArray[i], standardArray), 1);
+                    }
+                }
+            }
+            $("#armor").on("click",function(){
+                
+            });
+            var classCheck="";
+            var isClassCheck=false;
+            $('#classDrop').on("click", function (event) {
+                // alert("hello");
+                console.log(event);
+                classCheck = event.target.innerText;
+               // console.log(a);
+               isClassCheck=true;
+                $('.classbtn').text(classCheck);
+                fillClass();
+            });
+            $('#raceDrop').on("click", function (event) {
+                // alert("hello");
+                console.log(event);
+                a = event.target.innerText;
+                console.log(a);
+                $('.racebtn').text(a)
+            });
+            $('#backDrop').on("click", function (event) {
+                // alert("hello");
+                console.log(event);
+                a = event.target.innerText;
+                console.log(a);
+                $('.backbtn').text(a)
+            });
+            $('#levelDrop').on("click", function (event) {
+                // alert("hello");
+                console.log(event);
+                a = event.target.innerText;
+                console.log(a);
+                $('.levelbtn').text(a)
+            });
+            function fillClass()
+            {
+            const pathUrl = "https://api.open5e.com/classes/";
+            $.ajax({
+
+                url: pathUrl,
+                type: "GET",
+                dataType: "json",
+                success: function (result) {
+                    // console.log(result);
+                    if(isClassCheck==false)
+                    {
+                    for (var i = 0; i < result.results.length; i++) {
+                        // console.log(i,result.results[i].name);
+                        // var li=$("<li>");
+                        var li = "<li>" + result.results[i].name + "</li>";
+                           
+                        $("#classDrop").append(li);
+                    }
+                }
+                else
+                {
+                    for (var i = 0; i < result.results.length; i++) {
+                    if(result.results[i].name==classCheck)
+                    {
+                        armorClass=result.results[i].prof_armor.split(',');
+                        console.log(armorClass);
+                        for(var i=0;i<armorClass.length;i++)
+                        {
+                            console.log(armorClass[i]);
+                            if(armorClass[i]=="Light armor")
+                            {
+                               // alert("hi");
+                              var armor= " <div class='col s3'> <p>Light Armor</p><ul><button>Padded</button><button>Leather</button><button>Studded Leather</button></ul></div>";
+                               console.log(armor);
+                                $("#armor").append(armor); 
+                            }
+                            else if(armorClass[i]=="medium armor")
+                            {
+
+                            }
+                            else if(armorClass[i]=="shields")
+                            {
+                                
+                            }
+                            else if(armorClass[i]=="All armor")
+                            {
+
+                            }
+                            else if(armorClass[i]=="none")
+                            {
+
+                            }
+                        }
+                    }
+                    }
+                }
+                },
+                error: function (result) {
+
+                }
+            });
+        }
+            var raceUrl="https://api.open5e.com/races/";
+            $.ajax({
+
+                url: raceUrl,
+                type: "GET",
+                dataType: "json",
+                success: function (result) {
+                    // console.log(result);
+                    for (var i = 0; i < result.results.length; i++) {
+                        // console.log(i,result.results[i].name);
+                        // var li=$("<li>");
+                        var li = "<li>" + result.results[i].name + "</li>";
+                        //  console.log(li);
+                        $("#raceDrop").append(li);
+                    }
+                },
+                error: function (result) {
+
+                }
+            });
+            var backgroundUrl="https://api.open5e.com/backgrounds/";
+            $.ajax({
+
+                url: backgroundUrl,
+                type: "GET",
+                dataType: "json",
+                success: function (result) {
+                    // console.log(result);
+                    for (var i = 0; i < result.results.length; i++) {
+                        // console.log(i,result.results[i].name);
+                        // var li=$("<li>");
+                        var li = "<li>" + result.results[i].name + "</li>";
+                        //  console.log(li);
+                        $("#backDrop").append(li);
+                    }
+                },
+                error: function (result) {
+
+                }
+            });
+        });
+    </script>
+</body>
