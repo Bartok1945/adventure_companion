@@ -43,10 +43,10 @@
 
             </div>
         </div>
-        <div class="row">
-            <div class="col s3">
-                <a class='dropdown-button btn dropdownBtn classbtn' href='#' data-activates='classDrop'>Class<i
-                        class="material-icons right">arrow_drop_down</i></a>
+        <div class="row char-info">
+            <div class="col s1">
+                <a class='dropdown-button btn dropdownBtn classbtn' href='#'
+                    data-activates='classDrop'>Class<i class="material-icons right">arrow_drop_down</i></a>
 
                 <!-- Dropdown Structure -->
                 <ul id='classDrop' class='dropdown-content'>
@@ -54,9 +54,9 @@
                 </ul>
 
             </div>
-            <div class="col s3">
-                <a class='dropdown-button btn dropdownBtn levelbtn' href='#' data-activates='levelDrop'>Level<i
-                        class="material-icons right">arrow_drop_down</i></a>
+            <div class="col s1">
+                <a class='dropdown-button btn dropdownBtn levelbtn' href='#'
+                    data-activates='levelDrop'>Level<i class="material-icons right">arrow_drop_down</i></a>
 
                 <!-- Dropdown Structure -->
                 <ul id='levelDrop' class='dropdown-content'>
@@ -84,7 +84,7 @@
                 </ul>
 
             </div>
-            <div class="col s3">
+            <div class="col s1">
                 <a class='dropdown-button btn dropdownBtn racebtn' href='#' data-activates='raceDrop'>Race<i
                         class="material-icons right">arrow_drop_down</i></a>
 
@@ -94,45 +94,45 @@
                 </ul>
 
             </div>
-            <div class="col s3">
-                <a class='dropdown-button btn dropdownBtn backbtn' href='#' data-activates='backDrop'>Background<i
-                        class="material-icons right">arrow_drop_down</i></a>
+            <div class="col s1">
+                <a class='dropdown-button btn dropdownBtn backbtn' href='#'
+                    data-activates='backDrop'>Background<i class="material-icons right">arrow_drop_down</i></a>
 
- <!-- spells -->
+                <!-- spells -->
                 <!-- Dropdown Structure -->
                 <ul id='backDrop' class='dropdown-content'>
 
                 </ul>
 
-            <!-- Dropdown Structure for background -->
-            <ul id='backDrop' class='dropdown-content'>
+                <!-- Dropdown Structure for background -->
+                <ul id='backDrop' class='dropdown-content'>
                     <li>Acolyte</li>
                     <li>Charlatan</li>
                     <li>Criminal</li>
-                        <ul>
-                            <li>-->Spy</li>
-                        </ul>
+                    <ul>
+                        <li>-->Spy</li>
+                    </ul>
                     <li>Entertainer</li>
                     <li>Folk Hero</li>
                     <li>Guild Artisan</li>
-                        <ul>
-                            <li>-->Guild Merchant</li>
-                        </ul>
+                    <ul>
+                        <li>-->Guild Merchant</li>
+                    </ul>
                     <li>Hermit</li>
                     <li>Noble</li>
-                        <ul>
-                            <li>-->Knight</li>
-                        </ul>
+                    <ul>
+                        <li>-->Knight</li>
+                    </ul>
                     <li>Outlander</li>
                     <li>Sage</li>
                     <li>Sailor</li>
-                        <ul>
-                            <li>-->Pirate</li>
-                        </ul>
+                    <ul>
+                        <li>-->Pirate</li>
+                    </ul>
                     <li>Soldier</li>
                     <li>Urchin</li>
-            </ul>
- <!--main-->
+                </ul>
+                <!--main-->
 
             </div>
         </div>
@@ -210,7 +210,7 @@
                                     <p>
                                         <label>
                                             <input type="checkbox" class="filled-in" unchecked="checked" />
-                                            <span>Saving Throw</span>
+                                            <span class="saving-throw">Saving Throw</span>
                                         </label>
                                     </p>
                                     <p>
@@ -228,7 +228,7 @@
                                     <p>
                                         <label>
                                             <input type="checkbox" class="filled-in" unchecked="checked" />
-                                            <span>Saving Throw</span>
+                                            <span class="saving-throw">Saving Throw</span>
                                         </label>
                                     </p>
                                     <p>
@@ -257,7 +257,7 @@
                                     <p>
                                         <label>
                                             <input type="checkbox" class="filled-in" unchecked="checked" />
-                                            <span>Saving Throw</span>
+                                            <span class="saving-throw">Saving Throw</span>
                                         </label>
                                     </p>
                                 </form>
@@ -268,7 +268,7 @@
                                     <p>
                                         <label>
                                             <input type="checkbox" class="filled-in" unchecked="checked" />
-                                            <span>Saving Throw</span>
+                                            <span class="saving-throw">Saving Throw</span>
                                         </label>
                                     </p>
                                     <p>
@@ -309,7 +309,7 @@
                                     <p>
                                         <label>
                                             <input type="checkbox" class="filled-in" unchecked="checked" />
-                                            <span>Saving Throw</span>
+                                            <span class="saving-throw">Saving Throw</span>
                                         </label>
                                     </p>
                                     <p>
@@ -350,7 +350,7 @@
                                     <p>
                                         <label>
                                             <input type="checkbox" class="filled-in" unchecked="checked" />
-                                            <span>Saving Throw</span>
+                                            <span class="saving-throw">Saving Throw</span>
                                         </label>
                                     </p>
                                     <p>
@@ -408,47 +408,52 @@
 
                     </div>
                 </div>
-<<< <!-- spells -->
             </div>
 
         </div>
     </div>
 
-===
+    
+<!--Inventory Text Area-->
+    <div class="row">
+        <div class="col s6">
+            <div class="card blue-grey darken-1" style="width: 100%;">
+                <div class="card-content white-text">
+                    <span class="card-title center-align">Inventory</span>
+                    <hr>
+                    <div class="inventory" id="inventory">
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="inventory">My Bag of Holding</label>
+                            </div>
+                            <div class="col-75">
+                                <textarea id="subject" name="subject" placeholder="What are you carrying?"
+                                    style="height:200px"></textarea>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <input type="submit" value="Submit">
+                        </div>
+                        </form>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
 
-                <div class="row">
-                    <div class="col s12">
-                      <div class="card blue-grey darken-1" style="width: 100%;">
-                        <div class="card-content white-text">
-                          <span class="card-title center-align">Inventory</span>
-                          <hr>
-                          <div class="inventory" id="inventory">
-                            <div class="row">
-                                <div class="col-25">
-                                  <label for="inventory">My Bag of Holding</label>
-                                </div>
-                                <div class="col-75">
-                                  <textarea id="subject" name="subject" placeholder="What are you carrying?" style="height:200px"></textarea>
-                                </div>
-                              </div>
-                              <div class="row">
-                                <input type="submit" value="Submit">
-                              </div>
-                            </form>
-                          </div>
-                        </div>
-                        </div>
-                    </div>
-                        
-                      </div>
-                    </div>
-              
-<!-- main -->
+    </div>
+    <div id="addModel"class="modal">
+        <p>Roll the dice!</p>
+    </div>
+    
+    </div>
+
+   
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     <script src="script.js"></script>
-<!-- spells
+  
 
 </body>
 

@@ -20,6 +20,12 @@ body {
     text-align: center;
 }
 
+.char-info {
+   width: 80%;
+   margin: 0px auto;
+   
+}
+
 .display-4{
     font-family: 'Open Sans', sans-serif;
     font-family: 'Pirata One', cursive;
@@ -35,5 +41,9 @@ body {
  #dex-skills {
      position: ;
      float: left;
+ }
+
+ .saving-throw {
+     color: red;
  }
 
