@@ -150,6 +150,7 @@ $(document).ready(function () {
     function fillSpell() {
         const spellUrl = "https://api.open5e.com/spells/";
         var check = true;
+        
         $.ajax({
 
             url: spellUrl,
@@ -157,9 +158,10 @@ $(document).ready(function () {
             dataType: "json",
             success: function (result) {
                 var p = "";
+                var checkIfSpell=true;
+                console.log(checkIfSpell);
                 for (var i = 0; i < result.results.length; i++) {
                     var arrayCheck = [];
-
                     arrayCheck = result.results[i].dnd_class.split(",");
                     for (var j = 0; j < arrayCheck.length; j++) {
 
@@ -167,16 +169,22 @@ $(document).ready(function () {
                             if (check == true) {
                                 p = result.results[i].name;
                                 check = false;
+                               checkIfSpell=false;
                             }
-                            console.log("class", classCheck);
-                            console.log(arrayCheck[j]);
                             var li = "<li><a style='color:white' class='waves-effect waves-light btn modal-trigger'  href='#addModel'>" + result.results[i].name + "</a></li>";
                             $("#spellDrop").append(li);
-
                         }
 
+
                     }
+                    if(checkIfSpell==false)
+                    {
                     $('.spellbtn').text(p);
+                    }
+                    else
+                    {
+                        $('.spellbtn').text("No spell");
+                    }
 
                 }
 
@@ -188,9 +196,7 @@ $(document).ready(function () {
     //function when the spell drop down is clicked
     var nameCheck = "";
     $('#spellDrop').on("click", function (event) {
-        //console.log(event);
         nameCheck = event.target.innerText;
-        //console.log(event);
         $('.spellbtn').text(nameCheck);
         const spellUrl = "https://api.open5e.com/spells/";
         if (event.target.innerHTML != "") {
