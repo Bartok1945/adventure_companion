@@ -39,9 +39,17 @@ body {
 }
 
  #dex-skills {
-     position: ;
+     position: center;
      float: left;
  }
+
+ .btn{
+     background-color: #121f1f;
+ }
+
+ .card{
+    background-color:#253f3f;
+}
 
  .saving-throw {
      color: red;
