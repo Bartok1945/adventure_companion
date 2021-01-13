@@ -15,14 +15,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Pirata+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<style>
-    @media only screen and (min-width: 993px)
-    {
-.container {
-    width: 100%;
-}
-    }
-</style>
+    <style>
+        @media only screen and (min-width: 993px) {
+            .container {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -87,17 +86,23 @@
             </div>
             <div class="col s3">
                 <a class='dropdown-button btn dropdownBtn racebtn' href='#' data-activates='raceDrop'>Race<i
-                    class="material-icons right">arrow_drop_down</i></a>
+                        class="material-icons right">arrow_drop_down</i></a>
 
-            <!-- Dropdown Structure -->
-            <ul id='raceDrop' class='dropdown-content'>
+                <!-- Dropdown Structure -->
+                <ul id='raceDrop' class='dropdown-content'>
 
-            </ul>
+                </ul>
 
             </div>
             <div class="col s3">
                 <a class='dropdown-button btn dropdownBtn backbtn' href='#' data-activates='backDrop'>Background<i
-                    class="material-icons right">arrow_drop_down</i></a>
+                        class="material-icons right">arrow_drop_down</i></a>
+
+ <!-- spells -->
+                <!-- Dropdown Structure -->
+                <ul id='backDrop' class='dropdown-content'>
+
+                </ul>
 
             <!-- Dropdown Structure for background -->
             <ul id='backDrop' class='dropdown-content'>
@@ -127,84 +132,289 @@
                     <li>Soldier</li>
                     <li>Urchin</li>
             </ul>
+ <!--main-->
 
             </div>
         </div>
-            <div class="row">
-                <div class="col s12">
-                  <div class="card blue-grey darken-1" style="width: 100%;">
+        <div class="row">
+            <div class="col s12">
+                <div class="card blue-grey darken-1" style="width: 100%;">
                     <div class="card-content white-text">
-                      <span class="card-title center-align">Ability Score</span>
-                      <hr>
-                      <div class="row">
-                          <div class="col s2"> <p>STRENGTH</p>
-        <a class='dropdown-button btn dropdownBtn strengthbtn' id='strengthDrop' href='#' data-activates='strengthDropList'>Score<i
-                            class="material-icons right">arrow_drop_down</i></a>
-    
-                    <!-- Dropdown Structure -->
-                    <ul  id='strengthDropList' class='dropdown-content'>
-                        
-                    </ul>
-                </div>
-                          <div class="col s2"> <p>DEXTERITY</p>
-                           <a class='dropdown-button btn dropdownBtn DEXTERITYbtn' id='DEXTERNITYDrop' href='#' data-activates='DEXTERITYDropList'>Score<i
-                            class="material-icons right">arrow_drop_down</i></a>
-    
-                    <!-- Dropdown Structure -->
-                    <ul  id='DEXTERITYDropList' class='dropdown-content'>
-                        
-                    </ul>
-                </div>
-                          <div class="col s2"> <p>CONSTITUTION</p>
-                            <a class='dropdown-button btn dropdownBtn CONSTITUTIONbtn' id='CONSTITUTIONDrop' href='#' data-activates='CONSTITUTIONDropList'>Score<i
-                                class="material-icons right">arrow_drop_down</i></a>
-        
-                        <!-- Dropdown Structure -->
-                        <ul  id='CONSTITUTIONDropList' class='dropdown-content'>
-                        </div>
-                          <div class="col s2"> <p>INTELLIGENCE</p>
-                            <a class='dropdown-button btn dropdownBtn INTELLIGENCEbtn' id='INTELLIGENCEDrop' href='#' data-activates='INTELLIGENCEDropList'>Score<i
-                                class="material-icons right">arrow_drop_down</i></a>
-        
-                        <!-- Dropdown Structure -->
-                        <ul  id='INTELLIGENCEDropList' class='dropdown-content'>
+                        <span class="card-title center-align">Ability Score</span>
+                        <hr>
+                        <div class="row">
+                            <div class="col s2">
+                                <p>STRENGTH</p>
+                                <a class='dropdown-button btn dropdownBtn strengthbtn' id='strengthDrop' href='#'
+                                    data-activates='strengthDropList'>Score<i
+                                        class="material-icons right">arrow_drop_down</i></a>
 
+                                <!-- Dropdown Structure -->
+                                <ul id='strengthDropList' class='dropdown-content'>
+
+                                </ul>
+                            </div>
+                            <div class="col s2">
+                                <p>DEXTERITY</p>
+                                <a class='dropdown-button btn dropdownBtn DEXTERITYbtn' id='DEXTERNITYDrop' href='#'
+                                    data-activates='DEXTERITYDropList'>Score<i
+                                        class="material-icons right">arrow_drop_down</i></a>
+
+                                <!-- Dropdown Structure -->
+                                <ul id='DEXTERITYDropList' class='dropdown-content'>
+
+                                </ul>
+                            </div>
+                            <div class="col s2">
+                                <p>CONSTITUTION</p>
+                                <a class='dropdown-button btn dropdownBtn CONSTITUTIONbtn' id='CONSTITUTIONDrop'
+                                    href='#' data-activates='CONSTITUTIONDropList'>Score<i
+                                        class="material-icons right">arrow_drop_down</i></a>
+
+                                <!-- Dropdown Structure -->
+                                <ul id='CONSTITUTIONDropList' class='dropdown-content'>
+                            </div>
+                            <div class="col s2">
+                                <p>INTELLIGENCE</p>
+                                <a class='dropdown-button btn dropdownBtn INTELLIGENCEbtn' id='INTELLIGENCEDrop'
+                                    href='#' data-activates='INTELLIGENCEDropList'>Score<i
+                                        class="material-icons right">arrow_drop_down</i></a>
+
+                                <!-- Dropdown Structure -->
+                                <ul id='INTELLIGENCEDropList' class='dropdown-content'>
+
+                            </div>
+                            <div class="col s2">
+                                <p>WISDOM</p>
+                                <a class='dropdown-button btn dropdownBtn WISDOMbtn' id='WISDOMDrop' href='#'
+                                    data-activates='WISDOMDropList'>Score<i
+                                        class="material-icons right">arrow_drop_down</i></a>
+
+                                <!-- Dropdown Structure -->
+                                <ul id='WISDOMDropList' class='dropdown-content'>
+                            </div>
+                            <div class="col s2">
+                                <p>CHARISMA</p>
+                                <a class='dropdown-button btn dropdownBtn CHARISMAbtn' id='CHARISMADrop' href='#'
+                                    data-activates='CHARISMADropList'>Score<i
+                                        class="material-icons right">arrow_drop_down</i></a>
+
+                                <!-- Dropdown Structure -->
+                                <ul id='CHARISMADropList' class='dropdown-content'>
+                            </div>
                         </div>
-                          <div class="col s2"> <p>WISDOM</p>
-                            <a class='dropdown-button btn dropdownBtn WISDOMbtn' id='WISDOMDrop' href='#' data-activates='WISDOMDropList'>Score<i
-                                class="material-icons right">arrow_drop_down</i></a>
-        
-                        <!-- Dropdown Structure -->
-                        <ul  id='WISDOMDropList' class='dropdown-content'></div>
-                          <div class="col s2"> <p>CHARISMA</p>
-                            <a class='dropdown-button btn dropdownBtn CHARISMAbtn' id='CHARISMADrop' href='#' data-activates='CHARISMADropList'>Score<i
-                                class="material-icons right">arrow_drop_down</i></a>
-        
-                        <!-- Dropdown Structure -->
-                        <ul  id='CHARISMADropList' class='dropdown-content'></div>
+                        <!--Chatacter skills row and columns-->
+                        <div class="row">
+                            <div id=str-skills class="col s2">
+                                <form action="#">
+                                    <p>
+                                        <label>
+                                            <input type="checkbox" class="filled-in" unchecked="checked" />
+                                            <span>Saving Throw</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input type="checkbox" class="filled-in" unchecked="checked" />
+                                            <span>Athletics</span>
+                                        </label>
+                                    </p>
+                                </form>
+                            </div>
+
+                            <!--Dexterity skills-->
+                            <div id=dex-skills class="col s2">
+                                <form action="#">
+                                    <p>
+                                        <label>
+                                            <input type="checkbox" class="filled-in" unchecked="checked" />
+                                            <span>Saving Throw</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input type="checkbox" class="filled-in" unchecked="checked" />
+                                            <span>Acrobatics</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input type="checkbox" class="filled-in" unchecked="checked" />
+                                            <span>Sleight of Hand</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input type="checkbox" class="filled-in" unchecked="checked" />
+                                            <span>Stealth</span>
+                                        </label>
+                                    </p>
+                                </form>
+                            </div>
+                            <!--Constitution Saving Throw-->
+                            <div id=con-skills class="col s2">
+                                <form action="#">
+                                    <p>
+                                        <label>
+                                            <input type="checkbox" class="filled-in" unchecked="checked" />
+                                            <span>Saving Throw</span>
+                                        </label>
+                                    </p>
+                                </form>
+                            </div>
+                            <!--Intelligence skills-->
+                            <div id=int-skills class="col s2">
+                                <form action="#">
+                                    <p>
+                                        <label>
+                                            <input type="checkbox" class="filled-in" unchecked="checked" />
+                                            <span>Saving Throw</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input type="checkbox" class="filled-in" unchecked="checked" />
+                                            <span>Arcana</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input type="checkbox" class="filled-in" unchecked="checked" />
+                                            <span>History</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input type="checkbox" class="filled-in" unchecked="checked" />
+                                            <span>Investigation</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input type="checkbox" class="filled-in" unchecked="checked" />
+                                            <span>Nature</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input type="checkbox" class="filled-in" unchecked="checked" />
+                                            <span>Religion</span>
+                                        </label>
+                                    </p>
+                                </form>
+                            </div>
+                            <!--Wisdom Skills-->
+                            <div id=wis-skills class="col s2">
+                                <form action="#">
+                                    <p>
+                                        <label>
+                                            <input type="checkbox" class="filled-in" unchecked="checked" />
+                                            <span>Saving Throw</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input type="checkbox" class="filled-in" unchecked="checked" />
+                                            <span>Animal Handling</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input type="checkbox" class="filled-in" unchecked="checked" />
+                                            <span>Insight</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input type="checkbox" class="filled-in" unchecked="checked" />
+                                            <span>Medicine</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input type="checkbox" class="filled-in" unchecked="unchecked" />
+                                            <span>Perception</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input type="checkbox" class="filled-in" unchecked="checked" />
+                                            <span>Survival</span>
+                                        </label>
+                                    </p>
+                                </form>
+                            </div>
+                            <!--Charisma skills-->
+                            <div id=cha-skills class="col s2">
+                                <form action="#">
+                                    <p>
+                                        <label>
+                                            <input type="checkbox" class="filled-in" unchecked="checked" />
+                                            <span>Saving Throw</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input type="checkbox" class="filled-in" unchecked="checked" />
+                                            <span>Deception</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input type="checkbox" class="filled-in" unchecked="checked" />
+                                            <span>Intimidation</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input type="checkbox" class="filled-in" unchecked="checked" />
+                                            <span>Performance</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input type="checkbox" class="filled-in" unchecked="checked" />
+                                            <span>Persuasion</span>
+                                        </label>
+                                    </p>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div>
+                    <a class='dropdown-button btn dropdownBtn spellbtn' style="width:50%" href='#'
+                        data-activates='spellDrop'>spell<i class="material-icons right">arrow_drop_down</i></a>
+                    <!-- Dropdown Structure -->
+                    <ul id='spellDrop' class='dropdown-content'>
+                    </ul>
+                </div>
+                <div class="card-action">
+                    <a href="#">This is a link</a>
+                    <a href="#">This is a link</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12">
+            <div class="card blue-grey darken-1" style="width: 100%;">
+                <div class="card-content white-text">
+                    <span class="card-title center-align">Armor Class</span>
+                    <hr>
+                    <div class="row" id="armor">
+
                     </div>
                 </div>
-                    <div class="card-action">
-                      <a href="#">This is a link</a>
-                      <a href="#">This is a link</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col s12">
-                  <div class="card blue-grey darken-1" style="width: 100%;">
-                    <div class="card-content white-text">
-                      <span class="card-title center-align">Armor Class</span>
-                      <hr>
-                      <div class="row" id="armor">
-                        
-                    </div>
-                    </div>
-                </div>
-                    
-                  </div>
-                </div>
+<<< <!-- spells -->
+            </div>
+
+        </div>
+    </div>
+
+===
 
                 <div class="row">
                     <div class="col s12">
@@ -233,8 +443,14 @@
                       </div>
                     </div>
               
+<!-- main -->
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     <script src="script.js"></script>
+<!-- spells
+
 </body>
+
+</body>
+<!-- main -->
