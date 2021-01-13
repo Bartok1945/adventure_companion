@@ -128,6 +128,22 @@ $(document).ready(function () {
             }
         });
     }
+
+    //Function to roll a D20 using diceapi
+    var diceURL = "http://roll.diceapi.com/html/d20/"
+    $.ajax({
+        url: diceURL,
+        type: "GET",
+        dataType: "json",
+        success: function (result){
+            var rollValue = result.dice[0].value;
+            console.log(rollValue);
+        },
+        error: function(result){
+
+        }
+    });
+
     //function to fill the race using api get method    
     var raceUrl = "https://api.open5e.com/races/";
     $.ajax({
