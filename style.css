@@ -20,6 +20,12 @@ body {
     text-align: center;
 }
 
+.char-info {
+   width: 80%;
+   margin: 0px auto;
+   
+}
+
 .display-4{
     font-family: 'Open Sans', sans-serif;
     font-family: 'Pirata One', cursive;
@@ -43,5 +49,9 @@ body {
 
  .card{
     background-color:#253f3f;
+}
+
+ .saving-throw {
+     color: red;
  }
 

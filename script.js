@@ -1,6 +1,8 @@
 $(document).ready(function () {
+    //open the spell modal
+    $('#addModel').modal();
     //an array for the ability score
-    var standardArray = [-5, -4, -3, -2, -1, 0, +1, +2, +3, +4, +5, +6, +7, +8, +9, +10,+11,+12,+13,+14,+15,+16,+17,+18,+19,+20];
+    var standardArray = [-5, -4, -3, -2, -1, 0, +1, +2, +3, +4, +5, +6, +7, +8, +9, +10, +11, +12, +13, +14, +15, +16, +17, +18, +19, +20];
     //function for the classes
     fillClass();
     //function to fill the strength drop down
@@ -89,9 +91,13 @@ $(document).ready(function () {
         $('.racebtn').text(a)
     });
     //function when the class drop down is clicked    
+    var classCheck = "";
     $('#classDrop').on("click", function (event) {
-        a = event.target.innerText;
-        $('.classbtn').text(a)
+        classCheck = event.target.innerText;
+        $('.classbtn').text(classCheck);
+        $("#spellDrop").empty();
+        fillSpell();
+
     });
     //function when the background drop down is clicked
     $('#backDrop').on("click", function (event) {
@@ -122,6 +128,22 @@ $(document).ready(function () {
             }
         });
     }
+
+    //Function to roll a D20 using diceapi
+    var diceURL = "http://roll.diceapi.com/html/d20/"
+    $.ajax({
+        url: diceURL,
+        type: "GET",
+        dataType: "json",
+        success: function (result){
+            var rollValue = result.dice[0].value;
+            console.log(rollValue);
+        },
+        error: function(result){
+
+        }
+    });
+
     //function to fill the race using api get method    
     var raceUrl = "https://api.open5e.com/races/";
     $.ajax({
@@ -137,6 +159,86 @@ $(document).ready(function () {
         },
         error: function (result) {
 
+        }
+    });
+
+    //function to fill the spell dropdown
+    function fillSpell() {
+        const spellUrl = "https://api.open5e.com/spells/";
+        var check = true;
+        
+        $.ajax({
+
+            url: spellUrl,
+            type: "GET",
+            dataType: "json",
+            success: function (result) {
+                var p = "";
+                var checkIfSpell=true;
+                console.log(checkIfSpell);
+                for (var i = 0; i < result.results.length; i++) {
+                    var arrayCheck = [];
+                    arrayCheck = result.results[i].dnd_class.split(",");
+                    for (var j = 0; j < arrayCheck.length; j++) {
+
+                        if (arrayCheck[j] == classCheck) {
+                            if (check == true) {
+                                p = result.results[i].name;
+                                check = false;
+                               checkIfSpell=false;
+                            }
+                            var li = "<li><a style='color:white' class='waves-effect waves-light btn modal-trigger'  href='#addModel'>" + result.results[i].name + "</a></li>";
+                            $("#spellDrop").append(li);
+                        }
+
+
+                    }
+                    if(checkIfSpell==false)
+                    {
+                    $('.spellbtn').text(p);
+                    }
+                    else
+                    {
+                        $('.spellbtn').text("No spell");
+                    }
+
+                }
+
+            },
+            error: function (result) {
+            }
+        });
+    }
+    //function when the spell drop down is clicked
+    var nameCheck = "";
+    $('#spellDrop').on("click", function (event) {
+        nameCheck = event.target.innerText;
+        $('.spellbtn').text(nameCheck);
+        const spellUrl = "https://api.open5e.com/spells/";
+        if (event.target.innerHTML != "") {
+            $.ajax({
+
+                url: spellUrl,
+                type: "GET",
+                dataType: "json",
+                success: function (result) {
+                    for (var i = 0; i < result.results.length; i++) {
+                        var value = event.target;
+                        if (result.results[i].name == value.textContent) {
+                            var name = event.target.innerText;
+                            var description = result.results[i].desc;
+                            var level = result.results[i].level_int;
+                            var range = result.results[i].range;
+                            var v = "<div class='modal-content'> <h4 style='background-color:#26a69a;color:white'>Spell Info</h4><span class='spellBold'>Name: </span><span>" + name + "</span><br><span class='spellBold'>Description: </span><span>" + description + "</span><br><span class='spellBold'>Range: </span><span>" + range + "</span><br><span class='spellBold'>Level: </span><span>" + level + "</span></div>";
+                            $("#addModel").html('').append(v);
+                            var footer = "<div class='modal-footer'><a href='#!' class='modal-close waves-effect waves-green btn-flat'>Agree</a></div>";
+                            $("#addModel").prepend(footer);
+                        }
+                    }
+                },
+                error: function (result) {
+                }
+            });
         }
     });
 });
