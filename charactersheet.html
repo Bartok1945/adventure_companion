@@ -15,7 +15,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Pirata+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <style>
         @media only screen and (min-width: 993px) {
             .container {
@@ -55,7 +56,7 @@
                 </ul>
 
             </div>
-            
+
             <div class="col s1">
                 <a class='dropdown-button btn dropdownBtn levelbtn' href='#' data-activates='levelDrop'>Level<i
                         class="material-icons right">arrow_drop_down</i></a>
@@ -138,69 +139,77 @@
                     <div class="card-content white-text">
                         <span class="card-title center-align">Ability Score</span>
                         <hr>
+                        <!--Ability scores-->
                         <div class="row">
+                            <!-- Strength dropdown -->
                             <div class="col s2">
                                 <p>STRENGTH</p>
                                 <a class='dropdown-button btn dropdownBtn strengthbtn' id='strengthDrop' href='#'
                                     data-activates='strengthDropList'>Score<i
                                         class="material-icons right">arrow_drop_down</i></a>
 
-                                <!-- Dropdown Structure -->
+                                
                                 <ul id='strengthDropList' class='dropdown-content'>
 
                                 </ul>
                             </div>
+                            <!-- Dexterity dropdown -->
                             <div class="col s2">
                                 <p>DEXTERITY</p>
                                 <a class='dropdown-button btn dropdownBtn DEXTERITYbtn' id='DEXTERNITYDrop' href='#'
                                     data-activates='DEXTERITYDropList'>Score<i
                                         class="material-icons right">arrow_drop_down</i></a>
 
-                                <!-- Dropdown Structure -->
+                                
                                 <ul id='DEXTERITYDropList' class='dropdown-content'>
 
                                 </ul>
                             </div>
+                            <!-- constitution dropdown -->
                             <div class="col s2">
                                 <p>CONSTITUTION</p>
                                 <a class='dropdown-button btn dropdownBtn CONSTITUTIONbtn' id='CONSTITUTIONDrop'
                                     href='#' data-activates='CONSTITUTIONDropList'>Score<i
                                         class="material-icons right">arrow_drop_down</i></a>
 
-                                <!-- Dropdown Structure -->
+                                
                                 <ul id='CONSTITUTIONDropList' class='dropdown-content'>
                             </div>
+                            <!-- intelligence dropdown -->
                             <div class="col s2">
                                 <p>INTELLIGENCE</p>
                                 <a class='dropdown-button btn dropdownBtn INTELLIGENCEbtn' id='INTELLIGENCEDrop'
                                     href='#' data-activates='INTELLIGENCEDropList'>Score<i
                                         class="material-icons right">arrow_drop_down</i></a>
 
-                                <!-- Dropdown Structure -->
+                                
                                 <ul id='INTELLIGENCEDropList' class='dropdown-content'>
 
                             </div>
+                            <!-- Wisdom dropdown -->
                             <div class="col s2">
                                 <p>WISDOM</p>
                                 <a class='dropdown-button btn dropdownBtn WISDOMbtn' id='WISDOMDrop' href='#'
                                     data-activates='WISDOMDropList'>Score<i
                                         class="material-icons right">arrow_drop_down</i></a>
 
-                                <!-- Dropdown Structure -->
+                                
                                 <ul id='WISDOMDropList' class='dropdown-content'>
                             </div>
+                             <!-- Charisma Dropdown -->
                             <div class="col s2">
                                 <p>CHARISMA</p>
                                 <a class='dropdown-button btn dropdownBtn CHARISMAbtn' id='CHARISMADrop' href='#'
                                     data-activates='CHARISMADropList'>Score<i
                                         class="material-icons right">arrow_drop_down</i></a>
 
-                                <!-- Dropdown Structure -->
+                               
                                 <ul id='CHARISMADropList' class='dropdown-content'>
                             </div>
                         </div>
                         <!--Chatacter skills row and columns-->
                         <div class="row">
+                            <!--Strength skills-->
                             <div id=str-skills class="col s2">
                                 <form action="#">
                                     <p>
@@ -379,14 +388,14 @@
                     </div>
                 </div>
                 <div>
-                    <div id="addModel"class="modal"></div>
+                    <div id="addModel" class="modal"></div>
                     <a class='dropdown-button btn dropdownBtn spellbtn' style="width:50%" href='#'
                         data-activates='spellDrop'>spell<i class="material-icons right">arrow_drop_down</i></a>
                     <!-- Dropdown Structure -->
                     <ul id='spellDrop' class='dropdown-content'>
                     </ul>
                 </div>
-            
+
                 <div class="card-action">
                     <a href="#">This is a link</a>
                     <a href="#">This is a link</a>
@@ -427,47 +436,62 @@
                     <div class="card-content white-text">
                         <span class="card-title center-align">Weapons</span>
                         <hr>
-                        <div class="inventory" id="inventory">
+                        <div class="weapons" id="weapons">
+                            <!--Weapon info labels-->
                             <div class="row">
-                                
-                                <div class="col s4">
+
+                                <div class="col s3">
                                     <label for="inventory">Weapon Name</label>
                                 </div>
-                                <div class="col s4">
+                                <div class="col s3">
                                     <label for="inventory">Attack Bounus</label>
                                 </div>
                                 <div class="col s4">
                                     <label for="inventory">Damage Dice</label>
                                 </div>
                             </div>
-                                <div class="row">
+                            <!--Inputs for weapon info-->
+                            <div class="row weapon-info">
                                 <div class="flexbox">
-                                <div class="col s3">
-                                  <input value="what's my name?!">
+                                    <div class="col s3">
+                                        <input value="what's my name?!">
+                                    </div>
+                                    <div class="col s3">
+                                        <input value="How hard do you hit?">
+                                    </div>
+                                    <div class="col s3">
+                                        <input value="What's the damage?">
+                                    </div>
                                 </div>
-                                
-                            
-                               
-                                <div class="col s3">
-                                    <input value="How hard do you hit?">
-                                  </div>
                             </div>
-                        </div>
+                            <!--Dropdown for choosing weapon type-->
                             <div class="row">
-                                <input type="submit" value="Save">
-                                <input type="submit" value="Add Weapon">
+                                <div class="col s5">
+                                    <div id="addModel" class="modal"></div>
+                                    <a class='dropdown-button btn dropdownBtn weaponbtn' style="width:50%" href='#'
+                                        data-activates='weaponDrop'>weapon type<i
+                                            class="material-icons right">arrow_drop_down</i></a>
+                                    <ul id='weaponDrop' class='dropdown-content'>
+                                    </ul>
+                                </div>
                             </div>
-                        
-                           
-    
                         </div>
+                        <!--Buttons for saving changes and adding another weapon row-->
+                        <div class="row">
+                            <input type="submit" value="Save">
+                            <input type="submit" value="Add Weapon">
+                        </div>
+
+
+
                     </div>
                 </div>
             </div>
-    <!--DICE-->
-    <div id="addModel" class="modal">
-        <p>Roll the dice!</p>
-    </div>
+        </div>
+        <!--DICE-->
+        <div id="addModel" class="modal">
+            <p>Roll the dice!</p>
+        </div>
 
     </div>
 
