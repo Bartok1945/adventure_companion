@@ -26,6 +26,18 @@ body {
     justify-content: center;
 }
 
+.initiative {
+    padding-left: 25px;
+}
+
+.profbonus {
+    padding-left: 25px;
+}
+
+.fa-dice-d20 {
+    padding-left: 25px;
+
+}
 .display-4{
     font-family: 'Open Sans', sans-serif;
     font-family: 'Pirata One', cursive;
