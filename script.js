@@ -1,243 +1,159 @@
 $(document).ready(function () {
-    //  $('.dropdown-button').dropdown('open');
-    var standardArray=[15,14,13,12,10,8];
-    var armorClass=[];
+    //open the spell modal
+    $('#addModel').modal();
+    //an array for the ability score
+    var standardArray = ["-5","-4","-3","-2","-1","0","+1","+2","+3","+4","+5","+6","+7","+8","+9","+10"];
+    //function for the classes
     fillClass();
+    //function to fill the strength drop down
     $('#strengthDrop').on("click", function () {
-        // alert("hello");
-         $("#strengthDropList").empty();
-        for(var i=0;i<standardArray.length;i++)
-        {
-        var li="<li>"+standardArray[i]+"</li>";
-        $("#strengthDropList").append(li);
+        $("#strengthDropList").empty();
+        for (var i = 0; i < standardArray.length; i++) {
+            var li = "<li>" + standardArray[i] + "</li>";
+            $("#strengthDropList").append(li);
         }
-      //  $('.strengthbtn').text(a)
     });
+    //function when the strength drop down is clicked
     $('#strengthDropList').on("click", function (event) {
-         alert("hello");
-        console.log(event);
         a = event.target.innerText;
-        console.log(a);
         $('.strengthbtn').text(a);
-       deleteElementFromArray(a);
-        console.log(standardArray);
     });
+    //function to fill the Dexternity drop down
     $('#DEXTERNITYDrop').on("click", function () {
-       //  alert("hello");
-         $("#DEXTERITYDropList").empty();
-        for(var i=0;i<standardArray.length;i++)
-        {
-        var li="<li>"+standardArray[i]+"</li>";
-        $("#DEXTERITYDropList").append(li);
+        //  alert("hello");
+        $("#DEXTERITYDropList").empty();
+        for (var i = 0; i < standardArray.length; i++) {
+            var li = "<li>" + standardArray[i] + "</li>";
+            $("#DEXTERITYDropList").append(li);
         }
-      //  $('.strengthbtn').text(a)
     });
+    //function when the dexternity drop down is clicked
     $('#DEXTERITYDropList').on("click", function (event) {
-         alert("hello");
-        console.log(event);
         a = event.target.innerText;
-        console.log(a);
         $('.DEXTERITYbtn').text(a);
-       deleteElementFromArray(a);
-        console.log(standardArray);
     });
+    //function to fill the constitution drop down
     $('#CONSTITUTIONDrop').on("click", function () {
-        // alert("hello");
-         $("#CONSTITUTIONDropList").empty();
-        for(var i=0;i<standardArray.length;i++)
-        {
-        var li="<li>"+standardArray[i]+"</li>";
-        $("#CONSTITUTIONDropList").append(li);
+        $("#CONSTITUTIONDropList").empty();
+        for (var i = 0; i < standardArray.length; i++) {
+            var li = "<li>" + standardArray[i] + "</li>";
+            $("#CONSTITUTIONDropList").append(li);
         }
-      //  $('.strengthbtn').text(a)
     });
+    //function when the constitution drop down is clicked
     $('#CONSTITUTIONDropList').on("click", function (event) {
-       //  alert("hello");
-        console.log(event);
         a = event.target.innerText;
-        console.log(a);
         $('.CONSTITUTIONbtn').text(a);
-       deleteElementFromArray(a);
-        console.log(standardArray);
     });
+    //function to fill the intelligence drop down
     $('#INTELLIGENCEDrop').on("click", function () {
-        // alert("hello");
-         $("#INTELLIGENCEDropList").empty();
-        for(var i=0;i<standardArray.length;i++)
-        {
-        var li="<li>"+standardArray[i]+"</li>";
-        $("#INTELLIGENCEDropList").append(li);
+        $("#INTELLIGENCEDropList").empty();
+        for (var i = 0; i < standardArray.length; i++) {
+            var li = "<li>" + standardArray[i] + "</li>";
+            $("#INTELLIGENCEDropList").append(li);
         }
-      //  $('.strengthbtn').text(a)
     });
+    //function when the intelligence drop down is clicked
     $('#INTELLIGENCEDropList').on("click", function (event) {
-         alert("hello");
-        console.log(event);
         a = event.target.innerText;
-        console.log(a);
         $('.INTELLIGENCEbtn').text(a);
-       deleteElementFromArray(a);
-        console.log(standardArray);
     });
+
+    //function to fill the wisdom drop down
     $('#WISDOMDrop').on("click", function () {
-        // alert("hello");
-         $("#WISDOMDropList").empty();
-        for(var i=0;i<standardArray.length;i++)
-        {
-        var li="<li>"+standardArray[i]+"</li>";
-        $("#WISDOMDropList").append(li);
+        $("#WISDOMDropList").empty();
+        for (var i = 0; i < standardArray.length; i++) {
+            var li = "<li>" + standardArray[i] + "</li>";
+            $("#WISDOMDropList").append(li);
         }
-      //  $('.strengthbtn').text(a)
     });
+    //function when the wisdom drop down is clicked
     $('#WISDOMDropList').on("click", function (event) {
-         alert("hello");
-        console.log(event);
         a = event.target.innerText;
-        console.log(a);
         $('.WISDOMbtn').text(a);
-       deleteElementFromArray(a);
-        console.log(standardArray);
     });
+    //function to fill the chrisma drop down
     $('#CHARISMADrop').on("click", function () {
-        // alert("hello");
-         $("#CHARISMADropList").empty();
-        for(var i=0;i<standardArray.length;i++)
-        {
-        var li="<li>"+standardArray[i]+"</li>";
-        $("#CHARISMADropList").append(li);
+        $("#CHARISMADropList").empty();
+        for (var i = 0; i < standardArray.length; i++) {
+            var li = "<li>" + standardArray[i] + "</li>";
+            $("#CHARISMADropList").append(li);
         }
-      //  $('.strengthbtn').text(a)
     });
+    //function when the chrisma drop down is clicked
     $('#CHARISMADropList').on("click", function (event) {
-         alert("hello");
-        console.log(event);
         a = event.target.innerText;
-        console.log(a);
         $('.CHARISMAbtn').text(a);
-       deleteElementFromArray(a);
-        console.log(standardArray);
     });
-    function deleteElementFromArray(a)
-    {
-        for(var i=0;i<standardArray.length;i++)
-        {
-            if(standardArray[i]==a)
-            {
-                standardArray.splice($.inArray(standardArray[i], standardArray), 1);
-            }
-        }
-    }
-    $("#armor").on("click",function(){
-        
-    });
-    var classCheck="";
-    var isClassCheck=false;
-    $('#classDrop').on("click", function (event) {
-        // alert("hello");
-        console.log(event);
-        classCheck = event.target.innerText;
-       // console.log(a);
-       isClassCheck=true;
-        $('.classbtn').text(classCheck);
-        fillClass();
-    });
+    //function when the race drop down is clicked    
     $('#raceDrop').on("click", function (event) {
-        // alert("hello");
-        console.log(event);
         a = event.target.innerText;
-        console.log(a);
         $('.racebtn').text(a)
     });
+    //function when the class drop down is clicked    
+    var classCheck = "";
+    $('#classDrop').on("click", function (event) {
+        classCheck = event.target.innerText;
+        $('.classbtn').text(classCheck);
+        $("#spellDrop").empty();
+        fillSpell();
+
+    });
+    //function when the background drop down is clicked
     $('#backDrop').on("click", function (event) {
-        // alert("hello");
-        console.log(event);
         a = event.target.innerText;
-        console.log(a);
         $('.backbtn').text(a)
     });
+    //function when the level drop down is clicked    
     $('#levelDrop').on("click", function (event) {
-        // alert("hello");
-        console.log(event);
         a = event.target.innerText;
-        console.log(a);
         $('.levelbtn').text(a)
     });
-    function fillClass()
-    {
-    const pathUrl = "https://api.open5e.com/classes/";
-    $.ajax({
+    //function to fill the class using api get method    
+    function fillClass() {
+        const pathUrl = "https://api.open5e.com/classes/";
+        $.ajax({
 
-        url: pathUrl,
+            url: pathUrl,
+            type: "GET",
+            dataType: "json",
+            success: function (result) {
+                for (var i = 0; i < result.results.length; i++) {
+                    var li = "<li>" + result.results[i].name + "</li>";
+                    $("#classDrop").append(li);
+                }
+            },
+            error: function (result) {
+
+            }
+        });
+    }
+
+    //Function to roll a D20 using diceapi
+    var diceURL = "http://roll.diceapi.com/html/d20/"
+    $.ajax({
+        url: diceURL,
         type: "GET",
         dataType: "json",
-        success: function (result) {
-            // console.log(result);
-            if(isClassCheck==false)
-            {
-            for (var i = 0; i < result.results.length; i++) {
-                // console.log(i,result.results[i].name);
-                // var li=$("<li>");
-                var li = "<li>" + result.results[i].name + "</li>";
-                   
-                $("#classDrop").append(li);
-            }
-        }
-        else
-        {
-            for (var i = 0; i < result.results.length; i++) {
-            if(result.results[i].name==classCheck)
-            {
-                armorClass=result.results[i].prof_armor.split(',');
-                console.log(armorClass);
-                for(var i=0;i<armorClass.length;i++)
-                {
-                    console.log(armorClass[i]);
-                    if(armorClass[i]=="Light armor")
-                    {
-                       // alert("hi");
-                      var armor= " <div class='col s3'> <p>Light Armor</p><ul><button>Padded</button><button>Leather</button><button>Studded Leather</button></ul></div>";
-                       console.log(armor);
-                        $("#armor").append(armor); 
-                    }
-                    else if(armorClass[i]=="medium armor")
-                    {
-
-                    }
-                    else if(armorClass[i]=="shields")
-                    {
-                        
-                    }
-                    else if(armorClass[i]=="All armor")
-                    {
-
-                    }
-                    else if(armorClass[i]=="none")
-                    {
-
-                    }
-                }
-            }
-            }
-        }
+        success: function (result){
+            var rollValue = result.dice[0].value;
+            console.log(rollValue);
         },
-        error: function (result) {
+        error: function(result){
 
         }
     });
-}
-    var raceUrl="https://api.open5e.com/races/";
+
+    //function to fill the race using api get method    
+    var raceUrl = "https://api.open5e.com/races/";
     $.ajax({
 
         url: raceUrl,
         type: "GET",
         dataType: "json",
         success: function (result) {
-            // console.log(result);
             for (var i = 0; i < result.results.length; i++) {
-                // console.log(i,result.results[i].name);
-                // var li=$("<li>");
                 var li = "<li>" + result.results[i].name + "</li>";
-                //  console.log(li);
                 $("#raceDrop").append(li);
             }
         },
@@ -245,24 +161,84 @@ $(document).ready(function () {
 
         }
     });
-    var backgroundUrl="https://api.open5e.com/backgrounds/";
-    $.ajax({
 
-        url: backgroundUrl,
-        type: "GET",
-        dataType: "json",
-        success: function (result) {
-            // console.log(result);
-            for (var i = 0; i < result.results.length; i++) {
-                // console.log(i,result.results[i].name);
-                // var li=$("<li>");
-                var li = "<li>" + result.results[i].name + "</li>";
-                //  console.log(li);
-                $("#backDrop").append(li);
+    //function to fill the spell dropdown
+    function fillSpell() {
+        const spellUrl = "https://api.open5e.com/spells/";
+        var check = true;
+        
+        $.ajax({
+
+            url: spellUrl,
+            type: "GET",
+            dataType: "json",
+            success: function (result) {
+                var p = "";
+                var checkIfSpell=true;
+                console.log(checkIfSpell);
+                for (var i = 0; i < result.results.length; i++) {
+                    var arrayCheck = [];
+                    arrayCheck = result.results[i].dnd_class.split(",");
+                    for (var j = 0; j < arrayCheck.length; j++) {
+
+                        if (arrayCheck[j] == classCheck) {
+                            if (check == true) {
+                                p = result.results[i].name;
+                                check = false;
+                               checkIfSpell=false;
+                            }
+                            var li = "<li><a style='color:white' class='waves-effect waves-light btn modal-trigger'  href='#addModel'>" + result.results[i].name + "</a></li>";
+                            $("#spellDrop").append(li);
+                        }
+
+
+                    }
+                    if(checkIfSpell==false)
+                    {
+                    $('.spellbtn').text(p);
+                    }
+                    else
+                    {
+                        $('.spellbtn').text("No spell");
+                    }
+
+                }
+
+            },
+            error: function (result) {
             }
-        },
-        error: function (result) {
+        });
+    }
+    //function when the spell drop down is clicked
+    var nameCheck = "";
+    $('#spellDrop').on("click", function (event) {
+        nameCheck = event.target.innerText;
+        $('.spellbtn').text(nameCheck);
+        const spellUrl = "https://api.open5e.com/spells/";
+        if (event.target.innerHTML != "") {
+            $.ajax({
 
+                url: spellUrl,
+                type: "GET",
+                dataType: "json",
+                success: function (result) {
+                    for (var i = 0; i < result.results.length; i++) {
+                        var value = event.target;
+                        if (result.results[i].name == value.textContent) {
+                            var name = event.target.innerText;
+                            var description = result.results[i].desc;
+                            var level = result.results[i].level_int;
+                            var range = result.results[i].range;
+                            var v = "<div class='modal-content'> <h4 style='background-color:#26a69a;color:white'>Spell Info</h4><span class='spellBold'>Name: </span><span>" + name + "</span><br><span class='spellBold'>Description: </span><span>" + description + "</span><br><span class='spellBold'>Range: </span><span>" + range + "</span><br><span class='spellBold'>Level: </span><span>" + level + "</span></div>";
+                            $("#addModel").html('').append(v);
+                            var footer = "<div class='modal-footer'><a href='#!' class='modal-close waves-effect waves-green btn-flat'>Agree</a></div>";
+                            $("#addModel").prepend(footer);
+                        }
+                    }
+                },
+                error: function (result) {
+                }
+            });
         }
     });
 });
