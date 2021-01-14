@@ -15,7 +15,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Pirata+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <style>
         @media only screen and (min-width: 993px) {
             .container {
@@ -26,6 +27,12 @@
 </head>
 
 <body>
+    <!--DICE-->
+    <div id="click-to-roll">
+        <p id=clickroll>Click to roll!</p>
+        <i class="fas fa-dice-d20" id="roll20"></i>
+    </div>
+    <!--Adventure Companion Heading-->
     <div class="container">
         <div class="row">
             <div class="col s12">
@@ -33,34 +40,34 @@
 
             </div>
         </div>
+        <!--Enter character name-->
         <div class="row">
             <div class="col s6">
                 <h4 class="left-align" style="text-align: end;margin:0">Enter the character</h4>
-
-
             </div>
             <div class="col s6">
                 <input type="text" style="width: 70%;" placeholder="Character" />
 
             </div>
         </div>
-        <div class="row char-info">
+        <!-- character class dropdown -->
+        <div class="row flex-container">
             <div class="col s1">
                 <a class='dropdown-button btn dropdownBtn classbtn' href='#' data-activates='classDrop'>Class<i
                         class="material-icons right">arrow_drop_down</i></a>
 
-                <!-- Dropdown Structure -->
+
                 <ul id='classDrop' class='dropdown-content'>
 
                 </ul>
 
             </div>
-            
-            <div class="col s1">
+            <!-- Character Level dropdown -->
+            <div class="col s1 charclass">
                 <a class='dropdown-button btn dropdownBtn levelbtn' href='#' data-activates='levelDrop'>Level<i
                         class="material-icons right">arrow_drop_down</i></a>
 
-                <!-- Dropdown Structure -->
+
                 <ul id='levelDrop' class='dropdown-content'>
                     <li>Level 1</li>
                     <li>Level 2</li>
@@ -86,21 +93,21 @@
                 </ul>
 
             </div>
+            <!-- Dropdown Structure for race-->
             <div class="col s1">
                 <a class='dropdown-button btn dropdownBtn racebtn' href='#' data-activates='raceDrop'>Race<i
                         class="material-icons right">arrow_drop_down</i></a>
 
-                <!-- Dropdown Structure -->
+
                 <ul id='raceDrop' class='dropdown-content'>
 
                 </ul>
 
             </div>
-            <div class="col s1">
+            <!-- Dropdown Structure for background -->
+            <div class="col s3">
                 <a class='dropdown-button btn dropdownBtn backbtn' href='#' data-activates='backDrop'>Background<i
                         class="material-icons right">arrow_drop_down</i></a>
-
-                <!-- Dropdown Structure for background -->
                 <ul id='backDrop' class='dropdown-content'>
                     <li>Acolyte</li>
                     <li>Charlatan</li>
@@ -128,80 +135,67 @@
                     <li>Soldier</li>
                     <li>Urchin</li>
                 </ul>
-                <!--main-->
-
             </div>
         </div>
+        <!--Hit Points, Armor class, Movement Speed, Initiative, Proficiency bounus-->
+        <div class="row flex-container">
+            <!--HIT POINTS-->
+            <div class="card hitpoints col s6 m2" style="width: 10%;">
+                <div class="card-content white-text">
+                    <span class="center-align">Hit Points</span>
+                    <input>
+                </div>
+            </div>
+            <!--ARMOR CLASS-->
+            <div class="card armorclass col s6 m2" style="width: 12%;">
+                <div class="card-content white-text">
+                    <span class="center-align">Armor Class</span>
+                    <input>
+                </div>
+            </div>
+            <!--SPEED-->
+            <div class="card speed col s6 m2" style="width: 10%;">
+                <div class="card-content white-text">
+                    <span class="center-align">Speed ft.</span>
+                    <input>
+                </div>
+            </div>
+            <!--INITIATIVE-->
+            <div class="card initiative col s6 m2" style="width: 10%;">
+                <div class="card-content white-text">
+                    <span class="center-align">Initiative</span>
+                    <input>
+                </div>
+            </div>
+            <!--PROFICIENCY BOUNUS-->
+            <div class="card profbounus col s6 m2" style="width: 12%;">
+                <div class="card-content white-text">
+                    <span class="center-align">Prof. Bonus</span>
+                    <input>
+                </div>
+            </div>
+       </div>
+        <!--Ability scores row-->
         <div class="row">
             <div class="col s12">
                 <div class="card" style="width: 100%;">
                     <div class="card-content white-text">
-                        <span class="card-title center-align">Ability Score</span>
+                        <span class="card-title center-align">Ability Scores</span>
                         <hr>
+                        <!--Ability scores-->
                         <div class="row">
-                            <div class="col s2">
+                            <!-- Strength dropdown -->
+                            <div class="col s6 m2">
                                 <p>STRENGTH</p>
                                 <a class='dropdown-button btn dropdownBtn strengthbtn' id='strengthDrop' href='#'
                                     data-activates='strengthDropList'>Score<i
                                         class="material-icons right">arrow_drop_down</i></a>
 
-                                <!-- Dropdown Structure -->
+
                                 <ul id='strengthDropList' class='dropdown-content'>
 
                                 </ul>
-                            </div>
-                            <div class="col s2">
-                                <p>DEXTERITY</p>
-                                <a class='dropdown-button btn dropdownBtn DEXTERITYbtn' id='DEXTERNITYDrop' href='#'
-                                    data-activates='DEXTERITYDropList'>Score<i
-                                        class="material-icons right">arrow_drop_down</i></a>
-
-                                <!-- Dropdown Structure -->
-                                <ul id='DEXTERITYDropList' class='dropdown-content'>
-
-                                </ul>
-                            </div>
-                            <div class="col s2">
-                                <p>CONSTITUTION</p>
-                                <a class='dropdown-button btn dropdownBtn CONSTITUTIONbtn' id='CONSTITUTIONDrop'
-                                    href='#' data-activates='CONSTITUTIONDropList'>Score<i
-                                        class="material-icons right">arrow_drop_down</i></a>
-
-                                <!-- Dropdown Structure -->
-                                <ul id='CONSTITUTIONDropList' class='dropdown-content'>
-                            </div>
-                            <div class="col s2">
-                                <p>INTELLIGENCE</p>
-                                <a class='dropdown-button btn dropdownBtn INTELLIGENCEbtn' id='INTELLIGENCEDrop'
-                                    href='#' data-activates='INTELLIGENCEDropList'>Score<i
-                                        class="material-icons right">arrow_drop_down</i></a>
-
-                                <!-- Dropdown Structure -->
-                                <ul id='INTELLIGENCEDropList' class='dropdown-content'>
-
-                            </div>
-                            <div class="col s2">
-                                <p>WISDOM</p>
-                                <a class='dropdown-button btn dropdownBtn WISDOMbtn' id='WISDOMDrop' href='#'
-                                    data-activates='WISDOMDropList'>Score<i
-                                        class="material-icons right">arrow_drop_down</i></a>
-
-                                <!-- Dropdown Structure -->
-                                <ul id='WISDOMDropList' class='dropdown-content'>
-                            </div>
-                            <div class="col s2">
-                                <p>CHARISMA</p>
-                                <a class='dropdown-button btn dropdownBtn CHARISMAbtn' id='CHARISMADrop' href='#'
-                                    data-activates='CHARISMADropList'>Score<i
-                                        class="material-icons right">arrow_drop_down</i></a>
-
-                                <!-- Dropdown Structure -->
-                                <ul id='CHARISMADropList' class='dropdown-content'>
-                            </div>
-                        </div>
-                        <!--Chatacter skills row and columns-->
-                        <div class="row">
-                            <div id=str-skills class="col s2">
+                                <!--Strength Skills-->
                                 <form action="#">
                                     <p>
                                         <label>
@@ -217,9 +211,18 @@
                                     </p>
                                 </form>
                             </div>
+                            <!-- Dexterity dropdown -->
+                            <div class="col s6 m2">
+                                <p>DEXTERITY</p>
+                                <a class='dropdown-button btn dropdownBtn DEXTERITYbtn' id='DEXTERNITYDrop' href='#'
+                                    data-activates='DEXTERITYDropList'>Score<i
+                                        class="material-icons right">arrow_drop_down</i></a>
 
-                            <!--Dexterity skills-->
-                            <div id=dex-skills class="col s2">
+
+                                <ul id='DEXTERITYDropList' class='dropdown-content'>
+
+                                </ul>
+                                <!--Dexterity Skills-->
                                 <form action="#">
                                     <p>
                                         <label>
@@ -247,20 +250,37 @@
                                     </p>
                                 </form>
                             </div>
-                            <!--Constitution Saving Throw-->
-                            <div id=con-skills class="col s2">
-                                <form action="#">
-                                    <p>
-                                        <label>
-                                            <input type="checkbox" class="filled-in" unchecked="checked" />
-                                            <span class="saving-throw">Saving Throw</span>
-                                        </label>
-                                    </p>
-                                </form>
+                            <!-- constitution dropdown -->
+                            <div class="col s6 m2">
+                                <p>CONSTITUTION</p>
+                                <a class='dropdown-button btn dropdownBtn CONSTITUTIONbtn' id='CONSTITUTIONDrop'
+                                    href='#' data-activates='CONSTITUTIONDropList'>Score<i
+                                        class="material-icons right">arrow_drop_down</i></a>
+
+                            <!--Constitution saving throw-->
+                                <ul id='CONSTITUTIONDropList' class='dropdown-content'>
+                                    </ul>
+                                    <form action="#">
+                                        <p>
+                                            <label>
+                                                <input type="checkbox" class="filled-in" unchecked="checked" />
+                                                <span class="saving-throw">Saving Throw</span>
+                                            </label>
+                                        </p>
+                                    </form>
                             </div>
-                            <!--Intelligence skills-->
-                            <div id=int-skills class="col s2">
-                                <form action="#">
+                            <!-- intelligence dropdown -->
+                            <div class="col s6 m2">
+                                <p>INTELLIGENCE</p>
+                                <a class='dropdown-button btn dropdownBtn INTELLIGENCEbtn' id='INTELLIGENCEDrop'
+                                    href='#' data-activates='INTELLIGENCEDropList'>Score<i
+                                        class="material-icons right">arrow_drop_down</i></a>
+
+
+                                <ul id='INTELLIGENCEDropList' class='dropdown-content'>
+                                  </ul>  
+                                  <!--Intelligence skills-->
+                                  <form action="#">
                                     <p>
                                         <label>
                                             <input type="checkbox" class="filled-in" unchecked="checked" />
@@ -299,8 +319,16 @@
                                     </p>
                                 </form>
                             </div>
-                            <!--Wisdom Skills-->
-                            <div id=wis-skills class="col s2">
+                            <!-- Wisdom dropdown -->
+                            <div class="col s6 m2">
+                                <p>WISDOM</p>
+                                <a class='dropdown-button btn dropdownBtn WISDOMbtn' id='WISDOMDrop' href='#'
+                                    data-activates='WISDOMDropList'>Score<i
+                                        class="material-icons right">arrow_drop_down</i></a>
+
+
+                                <ul id='WISDOMDropList' class='dropdown-content'></ul>
+                                <!--Wisdom skills-->
                                 <form action="#">
                                     <p>
                                         <label>
@@ -340,8 +368,16 @@
                                     </p>
                                 </form>
                             </div>
-                            <!--Charisma skills-->
-                            <div id=cha-skills class="col s2">
+                            <!-- Charisma Dropdown -->
+                            <div class="col s6 m2">
+                                <p>CHARISMA</p>
+                                <a class='dropdown-button btn dropdownBtn CHARISMAbtn' id='CHARISMADrop' href='#'
+                                    data-activates='CHARISMADropList'>Score<i
+                                        class="material-icons right">arrow_drop_down</i></a>
+
+
+                                <ul id='CHARISMADropList' class='dropdown-content'></ul>
+                                <!--Charisma Skills-->
                                 <form action="#">
                                     <p>
                                         <label>
@@ -376,20 +412,14 @@
                                 </form>
                             </div>
                         </div>
-                    </div>
-                </div>
+                       
+                <!-- Spell Dropdown -->
                 <div>
-                    <div id="addModel"class="modal"></div>
+                    <div id="addModel" class="modal"></div>
                     <a class='dropdown-button btn dropdownBtn spellbtn' style="width:50%" href='#'
-                        data-activates='spellDrop'>spell<i class="material-icons right">arrow_drop_down</i></a>
-                    <!-- Dropdown Structure -->
+                        data-activates='spellDrop'>spells<i class="material-icons right">arrow_drop_down</i></a>
                     <ul id='spellDrop' class='dropdown-content'>
                     </ul>
-                </div>
-            
-                <div class="card-action">
-                    <a href="#">This is a link</a>
-                    <a href="#">This is a link</a>
                 </div>
             </div>
         </div>
@@ -397,7 +427,7 @@
     <!--Inventory Text Area-->
     <div class="row">
         <div class="col s6">
-            <div class="card" style="width: 100%;">
+            <div class="card inv-card" style="width: 77%;">
                 <div class="card-content white-text">
                     <span class="card-title center-align">Inventory</span>
                     <hr>
@@ -412,7 +442,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <input type="submit" value="Submit">
+                            <input type="submit" value="Save">
                         </div>
                         </form>
 
@@ -421,30 +451,69 @@
             </div>
         </div>
         <!--Weapons and spell attacks-->
-        <div class="col s6">
-            <div class="card" style="width: 100%;">
-                <div class="card-content white-text">
-                    <span class="card-title center-align">Weapons</span>
-                    <hr>
-                    <div class="inventory" id="inventory">
-                        <div class="row">
-                            <div class="col-25">
-                                <label for="Weapons">Blades and Bows</label>
+        <div class="row">
+            <div class="col s6">
+                <div class="card" style="width: 77%;">
+                    <div class="card-content white-text">
+                        <span class="card-title center-align">Weapons</span>
+                        <hr>
+                        <div class="weapons" id="weapons">
+                            <!--Weapon info labels-->
+                            <div class="row">
+
+                                <div class="col s4">
+                                    <label for="inventory">Weapon Name</label>
+                                </div>
+                                <div class="col s4">
+                                    <label for="inventory">Attack Bounus</label>
+                                </div>
+                                <div class="col s4">
+                                    <label for="inventory">Damage Dice and Type</label>
+                                </div>
                             </div>
-                            <div class="col-75">
-                                <textarea id="subject" name="subject" placeholder="What are you carrying?"
-                                    style="height:200px"></textarea>
+                            <!--Inputs for weapon info-->
+                            <div class="row weapon-info">
+                                <div class="flexbox">
+
+                                    <div class="col s4">
+                                        <input id="weapon-name" value="what's my name?!">
+                                    </div>
+                                    <div class="col s4">
+                                        <input id="attack-bonus" value="How hard do you hit?">
+                                    </div>
+                                    <div class="col s4">
+                                        <input id="damage-dice" value="What's the damage?">
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Dropdown for choosing weapon type-->
+                            <div class="row">
+                                <div class="col s8">
+                                    <div id="addModel" class="modal"></div>
+                                    <a class='dropdown-button btn dropdownBtn weaponbtn' style="width:50%" href='#'
+                                        data-activates='weaponDrop'>weapon type<i
+                                            class="material-icons right">arrow_drop_down</i></a>
+                                    <ul id='weaponDrop' class='dropdown-content'>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
+                        <!--Buttons for saving changes and adding another weapon row-->
+                        <div class="row">
+                            <input type="submit" value="Save">
+                            <input type="submit" value="Add Weapon">
+                        </div>
+
+
 
                     </div>
+                </div>
             </div>
         </div>
-    </div>
-    <!--DICE-->
-    <div id="addModel" class="modal">
-        <p>Roll the dice!</p>
-    </div>
+        <!--DICE-->
+        <div id="addModel" class="modal">
+            <p>Roll the dice!</p>
+        </div>
 
     </div>
 
