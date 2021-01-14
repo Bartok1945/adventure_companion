@@ -16,6 +16,13 @@ body {
        z-index: 100;
 
    }
+   
+   #save-button {
+    position: fixed;
+    top: 50px;
+    right: 150px;
+    z-index: 100;
+   }
 
    #roll20:hover {
     /* Start the shake animation and make the animation last for 0.5 seconds */
@@ -91,11 +98,5 @@ body {
     background-color:#253f3f;
 }
 
- .saving-throw {
-     color:#96bc96;
- }
 
-.inv-card {
-    float: right;
-}
 
