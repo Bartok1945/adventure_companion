@@ -130,8 +130,11 @@ $(document).ready(function () {
     }
 
     //Function to roll a D20 using diceapi
-    var diceURL = "http://roll.diceapi.com/html/d20/"
-    $.ajax({
+    function rollDice(){
+        
+
+        var diceURL = "http://roll.diceapi.com/html/d20/"
+        $.ajax({
         url: diceURL,
         type: "GET",
         dataType: "json",
@@ -142,7 +145,9 @@ $(document).ready(function () {
         error: function(result){
 
         }
-    });
+        });
+    }
+    
 
     //function to fill the race using api get method    
     var raceUrl = "https://api.open5e.com/races/";
