@@ -1,6 +1,8 @@
 $(document).ready(function () {
     //open the spell modal
     $('#addModel').modal();
+    //add the dropdown for the weapon
+    fillWeapon();
     //an array for the ability score
     var standardArray = ["-5","-4","-3","-2","-1","0","+1","+2","+3","+4","+5","+6","+7","+8","+9","+10"];
     //function for the classes
@@ -128,6 +130,27 @@ $(document).ready(function () {
             }
         });
     }
+
+    //Function to roll a D20 using diceapi
+    function rollDice(){
+        
+
+        var diceURL = "http://roll.diceapi.com/html/d20/"
+        $.ajax({
+        url: diceURL,
+        type: "GET",
+        dataType: "json",
+        success: function (result){
+            var rollValue = result.dice[0].value;
+            console.log(rollValue);
+        },
+        error: function(result){
+
+        }
+        });
+    }
+    
+
     //function to fill the race using api get method    
     var raceUrl = "https://api.open5e.com/races/";
     $.ajax({
@@ -225,4 +248,31 @@ $(document).ready(function () {
             });
         }
     });
+ //function when the weapons drop down is clicked
+ $('#weaponDrop').on("click", function (event) {
+    var weaponCheck = event.target.innerText;
+      //  console.log(event);
+        $('.weaponbtn').text(weaponCheck);
+
+    });   
+ //function when weapons dropdown is clicked
+ function fillWeapon()
+{
+    const weaponUrl = "https://api.open5e.com/weapons/";
+            $.ajax({
+
+                url: weaponUrl,
+                type: "GET",
+                dataType: "json",
+                success: function (result) {
+                    for (var i = 0; i < result.results.length; i++) {
+                        var li = "<li>" + result.results[i].name + "</li>";
+                        $("#weaponDrop").append(li);
+                    }
+
+                },
+                error: function (result) {
+                }
+            });
+}   
 });
