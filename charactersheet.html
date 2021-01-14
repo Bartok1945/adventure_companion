@@ -27,6 +27,7 @@
 </head>
 
 <body>
+    <!--Adventure Companion Heading-->
     <div class="container">
         <div class="row">
             <div class="col s12">
@@ -34,34 +35,34 @@
 
             </div>
         </div>
+        <!--Enter character name-->
         <div class="row">
             <div class="col s6">
                 <h4 class="left-align" style="text-align: end;margin:0">Enter the character</h4>
-
-
             </div>
             <div class="col s6">
                 <input type="text" style="width: 70%;" placeholder="Character" />
 
             </div>
         </div>
-        <div class="row char-info">
+        <!-- character class dropdown -->
+        <div class="row flex-container">
             <div class="col s1">
                 <a class='dropdown-button btn dropdownBtn classbtn' href='#' data-activates='classDrop'>Class<i
                         class="material-icons right">arrow_drop_down</i></a>
 
-                <!-- Dropdown Structure -->
+                
                 <ul id='classDrop' class='dropdown-content'>
 
                 </ul>
 
             </div>
-
+<!-- Character Level dropdown -->
             <div class="col s1">
                 <a class='dropdown-button btn dropdownBtn levelbtn' href='#' data-activates='levelDrop'>Level<i
                         class="material-icons right">arrow_drop_down</i></a>
 
-                <!-- Dropdown Structure -->
+               
                 <ul id='levelDrop' class='dropdown-content'>
                     <li>Level 1</li>
                     <li>Level 2</li>
@@ -87,21 +88,21 @@
                 </ul>
 
             </div>
+            <!-- Dropdown Structure for race-->
             <div class="col s1">
                 <a class='dropdown-button btn dropdownBtn racebtn' href='#' data-activates='raceDrop'>Race<i
                         class="material-icons right">arrow_drop_down</i></a>
 
-                <!-- Dropdown Structure -->
+                
                 <ul id='raceDrop' class='dropdown-content'>
 
                 </ul>
 
             </div>
-            <div class="col s1">
+            <!-- Dropdown Structure for background -->
+            <div class="col s3">
                 <a class='dropdown-button btn dropdownBtn backbtn' href='#' data-activates='backDrop'>Background<i
                         class="material-icons right">arrow_drop_down</i></a>
-
-                <!-- Dropdown Structure for background -->
                 <ul id='backDrop' class='dropdown-content'>
                     <li>Acolyte</li>
                     <li>Charlatan</li>
@@ -129,15 +130,18 @@
                     <li>Soldier</li>
                     <li>Urchin</li>
                 </ul>
-                <!--main-->
-
             </div>
         </div>
+        <!--Hit Points, Armor class, Movement Speed, Initiative, Proficiency bounus-->
+        <div >
+
+        </div>
+        <!--Ability scores row-->
         <div class="row">
             <div class="col s12">
                 <div class="card" style="width: 100%;">
                     <div class="card-content white-text">
-                        <span class="card-title center-align">Ability Score</span>
+                        <span class="card-title center-align">Ability Scores</span>
                         <hr>
                         <!--Ability scores-->
                         <div class="row">
@@ -406,7 +410,7 @@
     <!--Inventory Text Area-->
     <div class="row">
         <div class="col s6">
-            <div class="card" style="width: 100%;">
+            <div class="card inv-card" style="width: 77%;">
                 <div class="card-content white-text">
                     <span class="card-title center-align">Inventory</span>
                     <hr>
@@ -432,7 +436,7 @@
         <!--Weapons and spell attacks-->
         <div class="row">
             <div class="col s6">
-                <div class="card" style="width: 100%;">
+                <div class="card" style="width: 77%;">
                     <div class="card-content white-text">
                         <span class="card-title center-align">Weapons</span>
                         <hr>
@@ -440,33 +444,33 @@
                             <!--Weapon info labels-->
                             <div class="row">
 
-                                <div class="col s3">
+                                <div class="col s4">
                                     <label for="inventory">Weapon Name</label>
                                 </div>
-                                <div class="col s3">
+                                <div class="col s4">
                                     <label for="inventory">Attack Bounus</label>
                                 </div>
                                 <div class="col s4">
-                                    <label for="inventory">Damage Dice</label>
+                                    <label for="inventory">Damage Dice and Type</label>
                                 </div>
                             </div>
                             <!--Inputs for weapon info-->
                             <div class="row weapon-info">
                                 <div class="flexbox">
-                                    <div class="col s3">
+                                    <div class="col s4">
                                         <input value="what's my name?!">
                                     </div>
-                                    <div class="col s3">
+                                    <div class="col s4">
                                         <input value="How hard do you hit?">
                                     </div>
-                                    <div class="col s3">
+                                    <div class="col s4">
                                         <input value="What's the damage?">
                                     </div>
                                 </div>
                             </div>
                             <!--Dropdown for choosing weapon type-->
                             <div class="row">
-                                <div class="col s5">
+                                <div class="col s8">
                                     <div id="addModel" class="modal"></div>
                                     <a class='dropdown-button btn dropdownBtn weaponbtn' style="width:50%" href='#'
                                         data-activates='weaponDrop'>weapon type<i

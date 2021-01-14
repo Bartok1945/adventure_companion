@@ -20,10 +20,10 @@ body {
     text-align: center;
 }
 
-.char-info {
-   width: 80%;
-   margin: 0px auto;
-   
+.flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .display-4{
@@ -55,5 +55,7 @@ body {
      color:#96bc96;
  }
 
-
+.inv-card {
+    float: right;
+}
 
