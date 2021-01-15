@@ -134,6 +134,9 @@ $(document).ready(function () {
     }
 
     //Function to roll a D20 using diceapi
+
+skills-section
+
     $('#click-to-roll').on("click", function(event){
         var diceURL = "http://roll.diceapi.com/json/d20/"
         var rollValue = -1
@@ -153,27 +156,11 @@ $(document).ready(function () {
         $('.modal').modal();
     });
    
-    var diceURL = "http://roll.diceapi.com/html/d20/"
-    $.ajax({
 
-    function rollDice(){
+
         
 
-        var diceURL = "http://roll.diceapi.com/html/d20/"
-        $.ajax({
-    url: diceURL,
-        type: "GET",
-        dataType: "json",
-        success: function (result){
-            var rollValue = result.dice[0].value;
-            console.log(rollValue);
-        },
-        error: function(result){
 
-    }
-    });
-        });
-    }
 
     //function to fill the race using api get method    
     var raceUrl = "https://api.open5e.com/races/";
