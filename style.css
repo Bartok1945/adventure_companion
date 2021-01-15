@@ -61,11 +61,17 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    
+}
+
+.card-row {
+    width: 90%;
+    margin: 0 auto;
 }
 
 
 #clickroll{
-    padding-left: 20px;;
+    padding-left: 20px;
 }
 .fa-dice-d20 {
     padding-left: 25px;
@@ -100,5 +106,8 @@ body {
     background-color:#253f3f;
 }
 
+.page-footer {
+    background-color:#253f3f;
+}
 
 
