@@ -189,6 +189,7 @@ main
             type: "GET",
             dataType: "json",
             success: function (result) {
+                console.log(result);
                 var p = "";
                 var checkIfSpell=true;
                 console.log(checkIfSpell);
@@ -242,6 +243,7 @@ main
                         var value = event.target;
                         if (result.results[i].name == value.textContent) {
                             var name = event.target.innerText;
+                            console.log(name);
                             var description = result.results[i].desc;
                             var level = result.results[i].level_int;
                             var range = result.results[i].range;
