@@ -107,6 +107,7 @@ body {
  .card{
     background-color:#253f3f;
     font-family: 'MedievalSharp', cursive;
+
 }
 
 #add-weapon {
@@ -115,6 +116,15 @@ body {
 
 .page-footer {
     background-color:#253f3f;
+
+}
+
+.startBTN{
+    background-color:slategray;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Pirata One', cursive;
+    font-size: 20px;
+
 }
 
 .col-75{
