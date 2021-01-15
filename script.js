@@ -274,5 +274,11 @@ $(document).ready(function () {
                 error: function (result) {
                 }
             });
-}   
+}
+//function for when uer click on the add weapon
+$("#add-weapon").on("click",function(){
+    var name='what &#39s my name?!';
+    var addRow="<div class='col s4'><input id='weapon-name' value='"+name+"'></div><div class='col s4'><input id='attack-bonus' value='How hard do you hit?'></div><div class='col s4'><input id='damage-dice' value='What&#39s the damage?'></div>";
+    $(".flexbox").append(addRow);
+});   
 });
