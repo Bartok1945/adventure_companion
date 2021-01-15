@@ -1,10 +1,6 @@
 $(document).ready(function () {
     //open the spell modal
     $('#addModel').modal();
-  skills-section
-    //add the dropdown for the weapon
-    fillWeapon();
-  main
     //an array for the ability score
     var standardArray = ["-5","-4","-3","-2","-1","0","+1","+2","+3","+4","+5","+6","+7","+8","+9","+10"];
     //function for the classes
@@ -135,7 +131,6 @@ $(document).ready(function () {
 
     //Function to roll a D20 using diceapi
 
-skills-section
 
     $('#click-to-roll').on("click", function(event){
         var diceURL = "http://roll.diceapi.com/json/d20/"
@@ -259,37 +254,4 @@ skills-section
             });
         }
     });
- //function when the weapons drop down is clicked
- $('#weaponDrop').on("click", function (event) {
-    var weaponCheck = event.target.innerText;
-      //  console.log(event);
-        $('.weaponbtn').text(weaponCheck);
-
-    });   
- //function when weapons dropdown is clicked
- function fillWeapon()
-{
-    const weaponUrl = "https://api.open5e.com/weapons/";
-            $.ajax({
-
-                url: weaponUrl,
-                type: "GET",
-                dataType: "json",
-                success: function (result) {
-                    for (var i = 0; i < result.results.length; i++) {
-                        var li = "<li>" + result.results[i].name + "</li>";
-                        $("#weaponDrop").append(li);
-                    }
-
-                },
-                error: function (result) {
-                }
-            });
-}
-//function for when uer click on the add weapon
-$("#add-weapon").on("click",function(){
-    var name='what &#39s my name?!';
-    var addRow="<div class='col s4'><input id='weapon-name' value='"+name+"'></div><div class='col s4'><input id='attack-bonus' value='How hard do you hit?'></div><div class='col s4'><input id='damage-dice' value='What&#39s the damage?'></div>";
-    $(".flexbox").append(addRow);
-});   
 });
