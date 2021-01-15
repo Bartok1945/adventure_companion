@@ -46,8 +46,9 @@ body {
     100% { transform: translate(1px, -2px) rotate(-1deg); }
   }
 
-.jumbotron{
-    height: 740px;
+.title-container{
+    background-color: white;
+    height: 700px;
     width: 700px;
     margin-top:40px;
     margin-left: 200px;
@@ -80,6 +81,7 @@ body {
 
 }
 .display-4{
+    padding-top: 20px;
     font-family: 'Open Sans', sans-serif;
     font-family: 'Pirata One', cursive;
     text-align: center;
@@ -104,10 +106,18 @@ body {
 
  .card{
     background-color:#253f3f;
+    font-family: 'MedievalSharp', cursive;
+}
+
+#add-weapon {
+    margin-left: 10px;
 }
 
 .page-footer {
     background-color:#253f3f;
 }
 
+.col-75{
+    background-color:#121f1f;
+}
 
