@@ -1,8 +1,10 @@
 $(document).ready(function () {
     //open the spell modal
     $('#addModel').modal();
+  skills-section
     //add the dropdown for the weapon
     fillWeapon();
+  main
     //an array for the ability score
     var standardArray = ["-5","-4","-3","-2","-1","0","+1","+2","+3","+4","+5","+6","+7","+8","+9","+10"];
     //function for the classes
@@ -132,11 +134,16 @@ $(document).ready(function () {
     }
 
     //Function to roll a D20 using diceapi
+skills-section
+    var diceURL = "http://roll.diceapi.com/html/d20/"
+    $.ajax({
+
     function rollDice(){
         
 
         var diceURL = "http://roll.diceapi.com/html/d20/"
         $.ajax({
+main
         url: diceURL,
         type: "GET",
         dataType: "json",
@@ -147,9 +154,11 @@ $(document).ready(function () {
         error: function(result){
 
         }
+  skills-section
+    });
         });
     }
-    
+     main
 
     //function to fill the race using api get method    
     var raceUrl = "https://api.open5e.com/races/";
