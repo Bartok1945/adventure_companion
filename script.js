@@ -1,4 +1,9 @@
 $(document).ready(function () {
+<<<<<<< HEAD
+=======
+
+    var checkIfSpell = true;
+>>>>>>> da62368919bf194cf26faabf60e0fe3fd0b10cbd
     var classCheck = "";
     //get all the inputs from the localstorage
     if (localStorage.length != 0) {
@@ -341,26 +346,6 @@ $(document).ready(function () {
     $('#spellDrop').on("click", function (event) {
         nameCheck = event.target.innerText;
         $('.spellbtn').text(nameCheck);
-        const spellUrl = "https://api.open5e.com/spells/";
-        if (event.target.innerHTML != "") {
-            $.ajax({
-
-                url: spellUrl,
-                type: "GET",
-                dataType: "json",
-                success: function (result) {
-                    for (var i = 0; i < result.results.length; i++) {
-                        var value = event.target;
-                        if (result.results[i].name == value.textContent) {
-                            var name = event.target.innerText;
-                            console.log(name);
-                            var description = result.results[i].desc;
-                            var level = result.results[i].level_int;
-                            var range = result.results[i].range;
-                            var v = "<div class='modal-content'> <h4 style='background-color:#26a69a;color:white'>Spell Info</h4><span class='spellBold'>Name: </span><span>" + name + "</span><br><span class='spellBold'>Description: </span><span>" + description + "</span><br><span class='spellBold'>Range: </span><span>" + range + "</span><br><span class='spellBold'>Level: </span><span>" + level + "</span></div>";
-                            $("#addModel").html('').append(v);
-                            var footer = "<div class='modal-footer'><a href='#!' class='modal-close waves-effect waves-green btn-flat'>Agree</a></div>";
-                            $("#addModel").prepend(footer);
         for (var page = 1; page <= 7; page++) {
             const spellUrl = "https://api.open5e.com/spells/?page=" + page;
             if (event.target.innerHTML != "") {
