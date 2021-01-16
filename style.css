@@ -131,3 +131,14 @@ body {
     background-color:#121f1f;
 }
 
+#weapon-name{
+    font-family: 'MedievalSharp', cursive;
+}
+
+#attack-bonus{
+    font-family: 'MedievalSharp', cursive;
+}
+
+#damage-dice{
+    font-family: 'MedievalSharp', cursive;
+}

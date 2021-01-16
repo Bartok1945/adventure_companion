@@ -130,8 +130,6 @@ $(document).ready(function () {
     }
 
     //Function to roll a D20 using diceapi
-
-
     $('#click-to-roll').on("click", function(event){
         var diceURL = "http://roll.diceapi.com/json/d20/"
         var rollValue = -1
@@ -150,12 +148,6 @@ $(document).ready(function () {
         });
         $('.modal').modal();
     });
-   
-
-
-        
-
-
 
     //function to fill the race using api get method    
     var raceUrl = "https://api.open5e.com/races/";
@@ -186,6 +178,7 @@ $(document).ready(function () {
             type: "GET",
             dataType: "json",
             success: function (result) {
+                console.log(result);
                 var p = "";
                 var checkIfSpell=true;
                 console.log(checkIfSpell);
@@ -239,6 +232,7 @@ $(document).ready(function () {
                         var value = event.target;
                         if (result.results[i].name == value.textContent) {
                             var name = event.target.innerText;
+                            console.log(name);
                             var description = result.results[i].desc;
                             var level = result.results[i].level_int;
                             var range = result.results[i].range;
