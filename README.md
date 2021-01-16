@@ -36,7 +36,9 @@ Project is created with:
 
 ## Screenshot
 
-![image](./assets/images/screenshot.png)
+![image](./assets/images/charactersheet.png)
+![image](./assets/images/welcome.png)
+
 
 ## Link
 
