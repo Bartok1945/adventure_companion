@@ -46,8 +46,9 @@ body {
     100% { transform: translate(1px, -2px) rotate(-1deg); }
   }
 
-.jumbotron{
-    height: 740px;
+.title-container{
+    background-color: white;
+    height: 700px;
     width: 700px;
     margin-top:40px;
     margin-left: 200px;
@@ -61,11 +62,17 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    
+}
+
+.card-row {
+    width: 90%;
+    margin: 0 auto;
 }
 
 
 #clickroll{
-    padding-left: 20px;;
+    padding-left: 20px;
 }
 .fa-dice-d20 {
     padding-left: 25px;
@@ -74,10 +81,13 @@ body {
 
 }
 .display-4{
+    padding-top: 20px;
     font-family: 'Open Sans', sans-serif;
     font-family: 'Pirata One', cursive;
     text-align: center;
 }
+
+
 
 .crit{
     height: 200px;
@@ -96,7 +106,43 @@ body {
 
  .card{
     background-color:#253f3f;
+    font-family: 'MedievalSharp', cursive;
+
 }
 
+.weaponbtn {
+    margin-left: 10px;
+}
 
+#add-weapon {
+    margin-left: 10px;
+}
 
+.page-footer {
+    background-color:#253f3f;
+
+}
+
+.startBTN{
+    background-color:slategray;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Pirata One', cursive;
+    font-size: 20px;
+
+}
+
+.col-75{
+    background-color:#121f1f;
+}
+
+#weapon-name{
+    font-family: 'MedievalSharp', cursive;
+}
+
+#attack-bonus{
+    font-family: 'MedievalSharp', cursive;
+}
+
+#damage-dice{
+    font-family: 'MedievalSharp', cursive;
+}
