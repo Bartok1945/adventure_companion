@@ -48,8 +48,7 @@ body {
 
 .title-container{
     background-color: white;
-    font: black;
-    height: 600px;
+    height: 625px;
     width: 700px;
     margin-top:40px;
     margin-left: 200px;
@@ -69,6 +68,10 @@ body {
 .card-row {
     width: 90%;
     margin: 0 auto;
+}
+
+.charinfo {
+    font-size: large;
 }
 
 
@@ -93,7 +96,7 @@ body {
 .crit{
     height: 200px;
     width: 200px;
-    padding: 20px;
+    padding: 10px;
 }
 
  #dex-skills {
