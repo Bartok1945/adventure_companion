@@ -1,9 +1,6 @@
 $(document).ready(function () {
-<<<<<<< HEAD
-=======
 
     var checkIfSpell = true;
->>>>>>> da62368919bf194cf26faabf60e0fe3fd0b10cbd
     var classCheck = "";
     //get all the inputs from the localstorage
     if (localStorage.length != 0) {
@@ -302,21 +299,10 @@ $(document).ready(function () {
                         var arrayCheck = [];
                         arrayCheck = result.results[i].dnd_class.split(",");
                         for (var j = 0; j < arrayCheck.length; j++) {
-            url: spellUrl,
-            type: "GET",
-            dataType: "json",
-            success: function (result) {
-                console.log(result);
-                var p = "";
-                var checkIfSpell=true;
-                console.log(checkIfSpell);
-                for (var i = 0; i < result.results.length; i++) {
-                    var arrayCheck = [];
-                    arrayCheck = result.results[i].dnd_class.split(",");
-                    for (var j = 0; j < arrayCheck.length; j++) {
+
                             if (arrayCheck[j] == classCheck) {
                                 if (check == true) {
-                                   p = result.results[i].name;
+                                    p = result.results[i].name;
 
                                     check = false;
                                 }
@@ -435,6 +421,7 @@ $(document).ready(function () {
                 localStorage.setItem($(this)[0].id, $(this).val());
             }
         });
+
         localStorage.setItem("subject", $('#subject').val());
         localStorage.setItem("weapon-name", $('#weapon-name').val());
         localStorage.setItem("attack-bonus", $('#attack-bonus').val());
