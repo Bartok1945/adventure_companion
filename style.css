@@ -70,6 +70,10 @@ body {
     margin: 0 auto;
 }
 
+.charinfo {
+    font-size: large;
+}
+
 
 #clickroll{
     padding-left: 20px;
