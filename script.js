@@ -1,4 +1,6 @@
 $(document).ready(function () {
+
+    var checkIfSpell = true;
     var classCheck = "";
     //get all the inputs from the localstorage
     if (localStorage.length != 0) {
@@ -297,21 +299,10 @@ $(document).ready(function () {
                         var arrayCheck = [];
                         arrayCheck = result.results[i].dnd_class.split(",");
                         for (var j = 0; j < arrayCheck.length; j++) {
-            url: spellUrl,
-            type: "GET",
-            dataType: "json",
-            success: function (result) {
-                console.log(result);
-                var p = "";
-                var checkIfSpell=true;
-                console.log(checkIfSpell);
-                for (var i = 0; i < result.results.length; i++) {
-                    var arrayCheck = [];
-                    arrayCheck = result.results[i].dnd_class.split(",");
-                    for (var j = 0; j < arrayCheck.length; j++) {
+
                             if (arrayCheck[j] == classCheck) {
                                 if (check == true) {
-                                   p = result.results[i].name;
+                                    p = result.results[i].name;
 
                                     check = false;
                                 }
@@ -322,7 +313,7 @@ $(document).ready(function () {
 
                     }
                     if (p != "") {
-                        $('.spellbtn').text("Spells");
+                        $('.spellbtn').text(Spells);
                     }
                     else {
                         $('.spellbtn').text("No spell");
@@ -341,26 +332,6 @@ $(document).ready(function () {
     $('#spellDrop').on("click", function (event) {
         nameCheck = event.target.innerText;
         $('.spellbtn').text(nameCheck);
-        const spellUrl = "https://api.open5e.com/spells/";
-        if (event.target.innerHTML != "") {
-            $.ajax({
-
-                url: spellUrl,
-                type: "GET",
-                dataType: "json",
-                success: function (result) {
-                    for (var i = 0; i < result.results.length; i++) {
-                        var value = event.target;
-                        if (result.results[i].name == value.textContent) {
-                            var name = event.target.innerText;
-                            console.log(name);
-                            var description = result.results[i].desc;
-                            var level = result.results[i].level_int;
-                            var range = result.results[i].range;
-                            var v = "<div class='modal-content'> <h4 style='background-color:#26a69a;color:white'>Spell Info</h4><span class='spellBold'>Name: </span><span>" + name + "</span><br><span class='spellBold'>Description: </span><span>" + description + "</span><br><span class='spellBold'>Range: </span><span>" + range + "</span><br><span class='spellBold'>Level: </span><span>" + level + "</span></div>";
-                            $("#addModel").html('').append(v);
-                            var footer = "<div class='modal-footer'><a href='#!' class='modal-close waves-effect waves-green btn-flat'>Agree</a></div>";
-                            $("#addModel").prepend(footer);
         for (var page = 1; page <= 7; page++) {
             const spellUrl = "https://api.open5e.com/spells/?page=" + page;
             if (event.target.innerHTML != "") {
@@ -450,6 +421,7 @@ $(document).ready(function () {
                 localStorage.setItem($(this)[0].id, $(this).val());
             }
         });
+
         localStorage.setItem("subject", $('#subject').val());
         localStorage.setItem("weapon-name", $('#weapon-name').val());
         localStorage.setItem("attack-bonus", $('#attack-bonus').val());
