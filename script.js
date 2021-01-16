@@ -313,7 +313,7 @@ $(document).ready(function () {
 
                     }
                     if (p != "") {
-                        $('.spellbtn').text(Spells);
+                        $('.spellbtn').text("Spells");
                     }
                     else {
                         $('.spellbtn').text("No spell");
