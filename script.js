@@ -361,7 +361,7 @@ $(document).ready(function () {
         }
     });
     //function when the weapons drop down is clicked
-    $('#weaponDrop').on("click", function (event) {
+    $('.weaponDropDown').on("click", function (event) {
         var weaponCheck = event.target.innerText;
         $('.weaponbtn').text(weaponCheck);
     });
@@ -376,7 +376,7 @@ $(document).ready(function () {
             success: function (result) {
                 for (var i = 0; i < result.results.length; i++) {
                     var li = "<li>" + result.results[i].name + "</li>";
-                    $("#weaponDrop").append(li);
+                    $(".weaponDropDown").append(li);
                 }
             },
             error: function (result) {
@@ -386,7 +386,7 @@ $(document).ready(function () {
     //function for when uer click on the add weapon
     $("#add-weapon").on("click", function () {
         var name = 'what &#39s my name?!';
-        var addRow = "<div class='col s4'><input id='weapon-name' value='what &#39s my name?!'></div><div class='col s4'><input id='attack-bonus' value='How hard do you hit?'></div><div class='col s4'><input id='damage-dice' value='What&#39s the damage?'></div>";
+        var addRow = "<div class='col s4'><input id='weapon-name' value='" + name + "'></div><div class='col s4'><input id='attack-bonus' value='How hard do you hit?'></div><div class='col s4'><input id='damage-dice' value='What&#39s the damage?'>    </div><div class='row'><div class='col s8'><div id='addModel' class='modal'></div><a class='dropdown-button btn dropdownBtn weaponbtn' style='width:50%'href='#' data-activates='weaponDrop'>weapon type<i class='material-icons right'>arrow_drop_down</i></a><ul id='weaponDrop' class='dropdown-content weaponDropDown'></ul></div></div>";
         $(".flexbox").append(addRow);
     });
     //when user click the save button all the character sheet information will be saved on local storage
