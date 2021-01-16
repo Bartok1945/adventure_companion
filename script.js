@@ -386,7 +386,7 @@ $(document).ready(function () {
     //function for when uer click on the add weapon
     $("#add-weapon").on("click", function () {
         var name = 'what &#39s my name?!';
-        var addRow = "<div class='col s4'><input id='weapon-name' value='" + name + "'></div><div class='col s4'><input id='attack-bonus' value='How hard do you hit?'></div><div class='col s4'><input id='damage-dice' value='What&#39s the damage?'></div>";
+        var addRow = "<div class='col s4'><input id='weapon-name' value='what &#39s my name?!'></div><div class='col s4'><input id='attack-bonus' value='How hard do you hit?'></div><div class='col s4'><input id='damage-dice' value='What&#39s the damage?'></div>";
         $(".flexbox").append(addRow);
     });
     //when user click the save button all the character sheet information will be saved on local storage
