@@ -250,7 +250,7 @@ $(document).ready(function () {
     }
     //Function to roll a D20 using diceapi
     $('#click-to-roll').on("click", function (event) {
-        var diceURL = "https://roll.diceapi.com/json/d20/"
+        var diceURL = "https://cors-anywhere.herokuapp.com/http://roll.diceapi.com/json/d20/"
         var rollValue = -1
         $.ajax({
             url: diceURL,
