@@ -48,7 +48,8 @@ body {
 
 .title-container{
     background-color: white;
-    height: 700px;
+    font: black;
+    height: 600px;
     width: 700px;
     margin-top:40px;
     margin-left: 200px;
