@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--head of the html pag-->
+<!--head of the html page-->
 
 <head>
     <!--meta information-->
@@ -17,6 +17,8 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">  
     <style>
         @media only screen and (min-width: 993px) {
             .container {
@@ -27,10 +29,17 @@
 </head>
 
 <body>
+    <header>
+
+    <!--Save Button-->
+    <a class="waves-effect waves-light btn" id="save-button">Save Character</a>
     <!--DICE-->
-    <div id="click-to-roll">
+    <div id="click-to-roll" class="modal-trigger" href="#diceResult">
         <p id=clickroll>Click to roll!</p>
         <i class="fas fa-dice-d20" id="roll20"></i>
+    </div>
+    <!--Dice Roll Modal-->
+    <div class="modal" id="diceResult" style="font-size: 50px;">
     </div>
     <!--Adventure Companion Heading-->
     <div class="container">
@@ -38,21 +47,23 @@
             <div class="col s12">
                 <h2 class="center-align">Adventure Companion</h2>
 
+                </div>
             </div>
-        </div>
+    </header>
+    <main>
         <!--Enter character name-->
         <div class="row">
             <div class="col s6">
-                <h4 class="left-align" style="text-align: end;margin:0">Enter the character</h4>
+                <h4 class="left-align" style="text-align: end;margin:0;">Enter the character</h4>
             </div>
             <div class="col s6">
-                <input type="text" style="width: 70%;" placeholder="Character" />
+                <input type="text" id="char-name" style="width: 70%; font-size: 50px;" placeholder="Character" />
 
             </div>
         </div>
         <!-- character class dropdown -->
         <div class="row flex-container">
-            <div class="col s1">
+            <div class="col s3 m2">
                 <a class='dropdown-button btn dropdownBtn classbtn' href='#' data-activates='classDrop'>Class<i
                         class="material-icons right">arrow_drop_down</i></a>
 
@@ -63,7 +74,7 @@
 
             </div>
             <!-- Character Level dropdown -->
-            <div class="col s1 charclass">
+            <div class="col s3 m2 charclass">
                 <a class='dropdown-button btn dropdownBtn levelbtn' href='#' data-activates='levelDrop'>Level<i
                         class="material-icons right">arrow_drop_down</i></a>
 
@@ -94,7 +105,7 @@
 
             </div>
             <!-- Dropdown Structure for race-->
-            <div class="col s1">
+            <div class="col s3 m2">
                 <a class='dropdown-button btn dropdownBtn racebtn' href='#' data-activates='raceDrop'>Race<i
                         class="material-icons right">arrow_drop_down</i></a>
 
@@ -105,7 +116,7 @@
 
             </div>
             <!-- Dropdown Structure for background -->
-            <div class="col s3">
+            <div class="col s3 m2">
                 <a class='dropdown-button btn dropdownBtn backbtn' href='#' data-activates='backDrop'>Background<i
                         class="material-icons right">arrow_drop_down</i></a>
                 <ul id='backDrop' class='dropdown-content'>
@@ -138,43 +149,45 @@
             </div>
         </div>
         <!--Hit Points, Armor class, Movement Speed, Initiative, Proficiency bounus-->
-        <div class="row flex-container">
+        <div class="row flex-container card-row">
+            <div class="col s12">
             <!--HIT POINTS-->
-            <div class="card hitpoints col s6 m2" style="width: 10%;">
+            <div class="card hitpoints col s6 m2">
                 <div class="card-content white-text">
-                    <span class="center-align">Hit Points</span>
-                    <input>
+                    <h6 class="center-align">Hit Points</h6>
+                    <input id="hp" class="white-text charinfo" style="text-align:center; font-size: 50px;">
                 </div>
             </div>
             <!--ARMOR CLASS-->
-            <div class="card armorclass col s6 m2" style="width: 12%;">
+            <div class="card armorclass col s6 m2">
                 <div class="card-content white-text">
-                    <span class="center-align">Armor Class</span>
-                    <input>
+                    <h6 class="center-align">Armor Class</h6>
+                    <input id="ac" class="white-text charinfo" style="text-align:center; font-size: 50px;">
                 </div>
             </div>
             <!--SPEED-->
-            <div class="card speed col s6 m2" style="width: 10%;">
+            <div class="card speed col s6 m2">
                 <div class="card-content white-text">
-                    <span class="center-align">Speed ft.</span>
-                    <input>
+                    <h6 class="center-align">Speed ft.</h6>
+                    <input id="sp" class="white-text charinfo" style="text-align:center; font-size: 50px;">
                 </div>
             </div>
             <!--INITIATIVE-->
-            <div class="card initiative col s6 m2" style="width: 10%;">
+            <div class="card initiative col s6 m2">
                 <div class="card-content white-text">
-                    <span class="center-align">Initiative</span>
-                    <input>
+                    <h6 class="center-align">Initiative</h6>
+                    <input id="int" class="white-text charinfo" style="text-align:center; font-size: 50px;">
                 </div>
             </div>
             <!--PROFICIENCY BOUNUS-->
-            <div class="card profbounus col s6 m2" style="width: 12%;">
+            <div class="card profbounus col s6 m2">
                 <div class="card-content white-text">
-                    <span class="center-align">Prof. Bonus</span>
-                    <input>
+                    <h6 class="center-align">Prof. Bonus</h6>
+                    <input id="pb" class="white-text charinfo" style="text-align:center; font-size: 50px;"> 
                 </div>
             </div>
-       </div>
+            </div>
+        </div>
         <!--Ability scores row-->
         <div class="row">
             <div class="col s12">
@@ -199,7 +212,7 @@
                                 <form action="#">
                                     <p>
                                         <label>
-                                            <input type="checkbox" class="filled-in" unchecked="checked" />
+                                            <input type="checkbox" class="filled-in" id="str-save" unchecked="checked" />
                                             <span class="saving-throw">Saving Throw</span>
                                         </label>
                                     </p>
@@ -226,25 +239,25 @@
                                 <form action="#">
                                     <p>
                                         <label>
-                                            <input type="checkbox" class="filled-in" unchecked="checked" />
+                                            <input type="checkbox" class="filled-in" id="dex-save" unchecked="checked" />
                                             <span class="saving-throw">Saving Throw</span>
                                         </label>
                                     </p>
                                     <p>
                                         <label>
-                                            <input type="checkbox" class="filled-in" unchecked="checked" />
+                                            <input type="checkbox" class="filled-in" id="acrobatics" unchecked="checked" />
                                             <span>Acrobatics</span>
                                         </label>
                                     </p>
                                     <p>
                                         <label>
-                                            <input type="checkbox" class="filled-in" unchecked="checked" />
+                                            <input type="checkbox" class="filled-in" id="sleight" unchecked="checked" />
                                             <span>Sleight of Hand</span>
                                         </label>
                                     </p>
                                     <p>
                                         <label>
-                                            <input type="checkbox" class="filled-in" unchecked="checked" />
+                                            <input type="checkbox" class="filled-in" id="stealth" unchecked="checked" />
                                             <span>Stealth</span>
                                         </label>
                                     </p>
@@ -257,17 +270,17 @@
                                     href='#' data-activates='CONSTITUTIONDropList'>Score<i
                                         class="material-icons right">arrow_drop_down</i></a>
 
-                            <!--Constitution saving throw-->
+                                <!--Constitution saving throw-->
                                 <ul id='CONSTITUTIONDropList' class='dropdown-content'>
-                                    </ul>
-                                    <form action="#">
-                                        <p>
-                                            <label>
-                                                <input type="checkbox" class="filled-in" unchecked="checked" />
-                                                <span class="saving-throw">Saving Throw</span>
-                                            </label>
-                                        </p>
-                                    </form>
+                                </ul>
+                                <form action="#">
+                                    <p>
+                                        <label>
+                                            <input type="checkbox" class="filled-in" id="consave" unchecked="checked" />
+                                            <span class="saving-throw">Saving Throw</span>
+                                        </label>
+                                    </p>
+                                </form>
                             </div>
                             <!-- intelligence dropdown -->
                             <div class="col s6 m2">
@@ -278,42 +291,42 @@
 
 
                                 <ul id='INTELLIGENCEDropList' class='dropdown-content'>
-                                  </ul>  
-                                  <!--Intelligence skills-->
-                                  <form action="#">
+                                </ul>
+                                <!--Intelligence skills-->
+                                <form action="#">
                                     <p>
                                         <label>
-                                            <input type="checkbox" class="filled-in" unchecked="checked" />
+                                            <input type="checkbox" class="filled-in" id="int-save" unchecked="checked" />
                                             <span class="saving-throw">Saving Throw</span>
                                         </label>
                                     </p>
                                     <p>
                                         <label>
-                                            <input type="checkbox" class="filled-in" unchecked="checked" />
+                                            <input type="checkbox" class="filled-in" id="arcana" unchecked="checked" />
                                             <span>Arcana</span>
                                         </label>
                                     </p>
                                     <p>
                                         <label>
-                                            <input type="checkbox" class="filled-in" unchecked="checked" />
+                                            <input type="checkbox" class="filled-in" id="history" unchecked="checked" />
                                             <span>History</span>
                                         </label>
                                     </p>
                                     <p>
                                         <label>
-                                            <input type="checkbox" class="filled-in" unchecked="checked" />
+                                            <input type="checkbox" class="filled-in" id="investigation" unchecked="checked" />
                                             <span>Investigation</span>
                                         </label>
                                     </p>
                                     <p>
                                         <label>
-                                            <input type="checkbox" class="filled-in" unchecked="checked" />
+                                            <input type="checkbox" class="filled-in" id="nature" unchecked="checked" />
                                             <span>Nature</span>
                                         </label>
                                     </p>
                                     <p>
                                         <label>
-                                            <input type="checkbox" class="filled-in" unchecked="checked" />
+                                            <input type="checkbox" class="filled-in" id="religion" unchecked="checked" />
                                             <span>Religion</span>
                                         </label>
                                     </p>
@@ -332,37 +345,37 @@
                                 <form action="#">
                                     <p>
                                         <label>
-                                            <input type="checkbox" class="filled-in" unchecked="checked" />
+                                            <input type="checkbox" class="filled-in" id="wis-save" unchecked="checked" />
                                             <span class="saving-throw">Saving Throw</span>
                                         </label>
                                     </p>
                                     <p>
                                         <label>
-                                            <input type="checkbox" class="filled-in" unchecked="checked" />
+                                            <input type="checkbox" class="filled-in" id="animal" unchecked="checked" />
                                             <span>Animal Handling</span>
                                         </label>
                                     </p>
                                     <p>
                                         <label>
-                                            <input type="checkbox" class="filled-in" unchecked="checked" />
+                                            <input type="checkbox" class="filled-in" id="insight" unchecked="checked" />
                                             <span>Insight</span>
                                         </label>
                                     </p>
                                     <p>
                                         <label>
-                                            <input type="checkbox" class="filled-in" unchecked="checked" />
+                                            <input type="checkbox" class="filled-in" id="medicine" unchecked="checked" />
                                             <span>Medicine</span>
                                         </label>
                                     </p>
                                     <p>
                                         <label>
-                                            <input type="checkbox" class="filled-in" unchecked="unchecked" />
+                                            <input type="checkbox" class="filled-in" id="perception" unchecked="unchecked" />
                                             <span>Perception</span>
                                         </label>
                                     </p>
                                     <p>
                                         <label>
-                                            <input type="checkbox" class="filled-in" unchecked="checked" />
+                                            <input type="checkbox" class="filled-in" id="survival" unchecked="checked" />
                                             <span>Survival</span>
                                         </label>
                                     </p>
@@ -381,149 +394,168 @@
                                 <form action="#">
                                     <p>
                                         <label>
-                                            <input type="checkbox" class="filled-in" unchecked="checked" />
+                                            <input type="checkbox" class="filled-in" id="cha-save" unchecked="checked" />
                                             <span class="saving-throw">Saving Throw</span>
                                         </label>
                                     </p>
                                     <p>
                                         <label>
-                                            <input type="checkbox" class="filled-in" unchecked="checked" />
+                                            <input type="checkbox" class="filled-in" id="deception" unchecked="checked" />
                                             <span>Deception</span>
                                         </label>
                                     </p>
                                     <p>
                                         <label>
-                                            <input type="checkbox" class="filled-in" unchecked="checked" />
+                                            <input type="checkbox" class="filled-in" id="intimidation" unchecked="checked" />
                                             <span>Intimidation</span>
                                         </label>
                                     </p>
                                     <p>
                                         <label>
-                                            <input type="checkbox" class="filled-in" unchecked="checked" />
+                                            <input type="checkbox" class="filled-in" id="performance" unchecked="checked" />
                                             <span>Performance</span>
                                         </label>
                                     </p>
                                     <p>
                                         <label>
-                                            <input type="checkbox" class="filled-in" unchecked="checked" />
+                                            <input type="checkbox" class="filled-in" id="persuasion" unchecked="checked" />
                                             <span>Persuasion</span>
                                         </label>
                                     </p>
                                 </form>
                             </div>
                         </div>
-                       
-                <!-- Spell Dropdown -->
-                <div>
-                    <div id="addModel" class="modal"></div>
-                    <a class='dropdown-button btn dropdownBtn spellbtn' style="width:50%" href='#'
-                        data-activates='spellDrop'>spells<i class="material-icons right">arrow_drop_down</i></a>
-                    <ul id='spellDrop' class='dropdown-content'>
+
+                        <!-- Spell Dropdown -->
+                        <div>
+                            <div id="addModel" class="modal black-text"></div>
+                            <a class='dropdown-button btn dropdownBtn spellbtn' style="width:50%" href='#'
+                                data-activates='spellDrop'>spells<i class="material-icons right">arrow_drop_down</i></a>
+                            <ul id='spellDrop' class='dropdown-content'>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Inventory Text Area-->
+            <div class="row">
+                <div class="col s6">
+                    <div class="card inv-card" style="width: 100%;">
+                        <div class="card-content white-text">
+                            <span class="card-title center-align">Inventory</span>
+                            <hr>
+                            <div class="inventory" id="inventory">
+                                <div class="row">
+                                    <div class="col-25">
+                                        <label for="inventory">My Bag of Holding</label>
+                                    </div>
+                                    <div class="col-75">
+                                        <textarea id="subject" name="subject" class="white-text" placeholder="What are you carrying?"
+                                            style="height:200px"></textarea>
+                                    </div>
+                                </div>
+
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Weapons and spell attacks-->
+                <div class="row">
+                    <div class="col s6">
+                        <div class="card" style="width: 100%;">
+                            <div class="card-content white-text">
+                                <span class="card-title center-align">Weapons</span>
+                                <hr>
+                                <div class="weapons" id="weapons">
+                                    <!--Weapon info labels-->
+                                    <div class="row">
+
+                                        <div class="col s4">
+                                            <label for="inventory">Weapon Name</label>
+                                        </div>
+                                        <div class="col s4">
+                                            <label for="inventory">Attack Bounus</label>
+                                        </div>
+                                        <div class="col s4">
+                                            <label for="inventory">Damage Dice and Type</label>
+                                        </div>
+
+                                    </div>
+                        
+                           
+                                    <!--Inputs for weapon info-->
+                                    <div class="row weapon-info">
+                                        <div class="flexbox">
+
+                                            <div class="col s4">
+                                                <input id="weapon-name" class="white-text">
+                                            </div>
+                                            <div class="col s4">
+                                                <input id="attack-bonus" class="white-text">
+                                            </div>
+                                            <div class="col s4">
+                                                <input id="damage-dice" class="white-text">
+                                            </div>
+                                        </div>
+
+                                    <!--Dropdown for choosing weapon type-->
+                                    <div class="row">
+                                        <div class="col s8">
+                                            <div id="addModel" class="modal"></div>
+                                            <a class='dropdown-button btn dropdownBtn weaponbtn' style="width:50%"
+                                                href='#' data-activates='weaponDrop'>weapon type<i
+                                                    class="material-icons right">arrow_drop_down</i></a>
+                                            <ul id='weaponDrop' class='dropdown-content'>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Buttons for saving changes and adding another weapon row-->
+                                <div class="row">
+                                    <a class="waves-effect waves-light btn" id="add-weapon">+ Add Weapon</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+        </div>
+    </main>
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">This page brought to you by:</h5>
+                    <ul class="grey-text text-lighten-4">
+                        <li>Antonia Decastro, back-end</li>
+                        <li>Thom Huenger, front-end</li>
+                        <li>Rachel Kenney, front-end</li>
+                        <li>Amita Panwar, back-end</li>    
+                    </ul>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">This site is powered by:</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="https://open5e.com/" target="_blank">Open5E api</a></li>
+                        <li><a class="grey-text text-lighten-3" href="http://roll.diceapi.com/" target="_blank">Roll Dice API</a></li>
+                        <li><a class="grey-text text-lighten-3" href="https://materializecss.com/" target="_blank">Materialize</a></li>
+                        
                     </ul>
                 </div>
             </div>
         </div>
-    </div>
-    <!--Inventory Text Area-->
-    <div class="row">
-        <div class="col s6">
-            <div class="card inv-card" style="width: 77%;">
-                <div class="card-content white-text">
-                    <span class="card-title center-align">Inventory</span>
-                    <hr>
-                    <div class="inventory" id="inventory">
-                        <div class="row">
-                            <div class="col-25">
-                                <label for="inventory">My Bag of Holding</label>
-                            </div>
-                            <div class="col-75">
-                                <textarea id="subject" name="subject" placeholder="What are you carrying?"
-                                    style="height:200px"></textarea>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <input type="submit" value="Save">
-                        </div>
-                        </form>
-
-                    </div>
-                </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2021 Copyright
+                
             </div>
         </div>
-        <!--Weapons and spell attacks-->
-        <div class="row">
-            <div class="col s6">
-                <div class="card" style="width: 77%;">
-                    <div class="card-content white-text">
-                        <span class="card-title center-align">Weapons</span>
-                        <hr>
-                        <div class="weapons" id="weapons">
-                            <!--Weapon info labels-->
-                            <div class="row">
-
-                                <div class="col s4">
-                                    <label for="inventory">Weapon Name</label>
-                                </div>
-                                <div class="col s4">
-                                    <label for="inventory">Attack Bounus</label>
-                                </div>
-                                <div class="col s4">
-                                    <label for="inventory">Damage Dice and Type</label>
-                                </div>
-                            </div>
-                            <!--Inputs for weapon info-->
-                            <div class="row weapon-info">
-                                <div class="flexbox">
-
-                                    <div class="col s4">
-                                        <input id="weapon-name" value="what's my name?!">
-                                    </div>
-                                    <div class="col s4">
-                                        <input id="attack-bonus" value="How hard do you hit?">
-                                    </div>
-                                    <div class="col s4">
-                                        <input id="damage-dice" value="What's the damage?">
-                                    </div>
-                                </div>
-                            </div>
-                            <!--Dropdown for choosing weapon type-->
-                            <div class="row">
-                                <div class="col s8">
-                                    <div id="addModel" class="modal"></div>
-                                    <a class='dropdown-button btn dropdownBtn weaponbtn' style="width:50%" href='#'
-                                        data-activates='weaponDrop'>weapon type<i
-                                            class="material-icons right">arrow_drop_down</i></a>
-                                    <ul id='weaponDrop' class='dropdown-content'>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <!--Buttons for saving changes and adding another weapon row-->
-                        <div class="row">
-                            <input type="submit" value="Save">
-                            <input type="submit" value="Add Weapon">
-                        </div>
-
-
-
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--DICE-->
-        <div id="addModel" class="modal">
-            <p>Roll the dice!</p>
-        </div>
-
-    </div>
-
-
-    </div>
+    </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     <script src="script.js"></script>
 
-
 </body>
-
-</body>
+© 2021 GitHub, Inc.
