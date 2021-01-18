@@ -75,6 +75,7 @@ h2 {
     margin: 0 auto;
 }
 
+
 .hitpoints {
     margin-right: 20px;
 }
@@ -90,6 +91,7 @@ h2 {
 .initiative {
     margin-right: 20px;
 }
+
 
 .charinfo {
     font-size: large;
@@ -146,6 +148,7 @@ h2 {
 .page-footer {
     background-color:#253f3f;
 
+
 }
 
 .startBTN{
@@ -196,3 +199,4 @@ h2 {
 #pb{
     font-family: 'MedievalSharp', cursive;
 }
+=======
