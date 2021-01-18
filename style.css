@@ -133,6 +133,7 @@ body {
     font-family: 'Pirata One', cursive;
     font-size: 20px;
 
+
 }
 
 .col-75{
@@ -175,3 +176,48 @@ body {
 #pb{
     font-family: 'MedievalSharp', cursive;
 }
+=======
+
+}
+
+.col-75{
+    background-color:#121f1f;
+}
+
+#weapon-name{
+    font-family: 'MedievalSharp', cursive;
+}
+
+#attack-bonus{
+    font-family: 'MedievalSharp', cursive;
+}
+
+#damage-dice{
+    font-family: 'MedievalSharp', cursive;
+}
+
+#char-name{
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Pirata One', cursive;
+}
+
+#hp{
+    font-family: 'MedievalSharp', cursive;
+}
+
+#ac{
+    font-family: 'MedievalSharp', cursive;
+}
+
+#int{
+    font-family: 'MedievalSharp', cursive;
+}
+
+#sp{
+    font-family: 'MedievalSharp', cursive;
+}
+
+#pb{
+    font-family: 'MedievalSharp', cursive;
+}
+
