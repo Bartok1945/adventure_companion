@@ -8,6 +8,10 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-family: 'Pirata One', cursive;
    }
+   
+h2 {
+    padding-top: 50px; 
+}
 
    #click-to-roll {
        position: fixed;
@@ -60,6 +64,7 @@ body {
 
 .flex-container {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     
@@ -68,6 +73,22 @@ body {
 .card-row {
     width: 90%;
     margin: 0 auto;
+}
+
+.hitpoints {
+    margin-right: 20px;
+}
+
+.armorclass {
+    margin-right: 20px;
+}
+
+.speed {
+    margin-right: 20px;
+}
+
+.initiative {
+    margin-right: 20px;
 }
 
 .charinfo {
